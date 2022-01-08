@@ -1,3 +1,97 @@
-body {
-  font-family: monospace;
-}
+  body {
+    font-family:sans-serif;
+    letter-spacing: 1px;
+    padding:0px;
+    margin: 0px;
+  }
+  h1,h2,h3 {
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+  }
+  p {
+    font-size: 15px;
+    font-weight:lighter;
+  }
+  .row {
+    margin: 50px 40px;
+  }
+  .side {
+    position:absolute;
+    width:150px;
+    background-color: white;
+    text-align:left;
+    height:auto;
+  }
+  .main {
+    position:absolute;
+    left: 220px;
+    background-color: white;
+    margin-right: 40px;
+  }
+  .title {
+    float:left;
+    font-weight:bold;
+    font-size:15px;
+    margin-bottom: 40px;
+  }
+  .title:hover {
+/*  text-decoration: underline;
+    text-decoration-style: wavy; 
+    text-underline-position: under; */
+  }
+  .bio {
+    float:left;
+    font-size: 10px;
+    padding: 0px 0px 10px 0px;
+  }
+  .sidenav {
+    float:left;
+    font-size: 12px;
+    line-height: 1.75;
+    padding: 10px 0px;
+  }
+  .sidenav a {
+    color:black;
+    text-decoration:none;
+  }
+
+  .sidenav a:hover {
+    color: #ed6051;
+    text-decoration:none;
+  }
+  .gallery {
+    margin: 4%;
+    float: center;
+    width: 90%;
+  }
+  .gallery img:hover {
+    opacity: 90%;
+  }
+  .gallery img {
+    width: 100%;
+    height: auto;
+  }
+  .coverimage {
+    width:100%;
+  }
+  .imgdesc {
+    padding:15px;
+    font-size: 12px;
+    text-align:left;
+  }
+  .button {
+    background-color: black;
+    border: 2px solid black;
+    color:white;
+    padding: 15px 32px;
+    text-align:center;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-size: 10px;
+    letter-spacing: 5px;
+  }
+  .button:hover {
+    background-color: white;
+    color:black;
+  }
