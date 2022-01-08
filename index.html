@@ -3,26 +3,18 @@
 <html>
 
 <head>
-<title>Amick Sollenberger</title>
-<link rel="stylesheet" href="style.css" />
+    <title>Amick Sollenberger</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script> 
+        $(function(){
+            $("#nav").load("nav.html"); 
+        });
+    </script> 
 </head>
 <body>
   <div class="row">
-    <div class="side">
-      <div class="title">Amick Sollenberger</div>
-      <div class="bio">
-          engineering student and artist in Providence, RI
-          <br> <i>*website in progress*</i>
-      </div>
-      <div class="sidenav">
-        <nav>
-          <a href="#home">About</a> <br>
-          <a href="#work">Work</a> <br>
-          <a href="#resume">Resume</a> <br>
-          <a href="#contact">Contact</a> <br>
-        </nav>
-      </div>
-    </div>
+    <div id="nav"></div>
     <div class="main">
 <table class="center">
     <tr>
