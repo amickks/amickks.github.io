@@ -7,7 +7,7 @@ body {
     margin: 0px;
   }
   h1,h2,h3 {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
     color: black;
   }
@@ -35,16 +35,16 @@ body {
 @media (max-width: 600px) {
       .side {
         width:0%;
-
       }
       .main {
         width: 100%; 
       }
 }
   .navbar {
-    position:sticky;
+    position: sticky;
+/*    width: 100%;*/
+    top: 0;
     background-color: white;
-    top:0;
     overflow:hidden;
     padding: 20px;
   }
@@ -55,7 +55,7 @@ body {
   .title a {
     float:left;
     font-weight:bold;
-    font-size:20px;
+    font-size:24px;
     text-decoration: none;
     color:black;
   }
@@ -65,6 +65,11 @@ body {
     text-underline-position: under;
     color:black;
   }
+@media (max-width: 600px) {
+    .title a:hover {
+        text-decoration: none;
+    }
+}
 
   .sidenav {
     padding-top: 20px;
@@ -103,18 +108,22 @@ body {
     transition: 0s;
     padding-top:40px;
   }
-  .sidenav p, a {
-    margin-left:20px;
+  .sidenav a {
+    margin-left: 20px;
+  }
+  .sidenav p {
+    margin-left: 20px;
   }
   .sidenav .closebtn {
     position:absolute;
     top:0;
-    font-size:18px;
+    font-size:24px;
     padding:20px;
 
   }
   .openbtn {
     cursor:pointer;
+    font-size:24px;
     float:right;
   }
 }
@@ -141,6 +150,7 @@ body {
 .gallery img {
 /*  vertical-align: middle;*/
   width: 100%;
+  user-select: none;
 }
 .gallery img:hover {
   opacity: 90%;
