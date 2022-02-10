@@ -1,35 +1,55 @@
-
 <!DOCTYPE html>
-<html>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
 <head>
-    <title>Amick Sollenberger</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="function.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>     
-    $(function(){
-        $("#navbar").load("navbar.html"); });
-    $(function(){
-        $("#sidebar").load("sidebar.html"); });
-    </script>
+    <meta charset="UTF-8">
+    <title>amickks.github.io</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
-<div id="navbar"></div>   
-<div class="content">
-  <div id="sidebar"></div>
-    <div class="main">
-        <div class="gallery">
-            <a target="_blank" href=""><img src="images/ring1.jpg" alt="1"></a> 
-            <a target="_blank" href=""><img src="images/ring2.jpg" alt="3"></a>
-            <a target="_blank" class = "" href=""><img src="images/ring4.jpg" alt="4"></a>
-            <a target="_blank" href=""><img src="images/assemble.jpg" alt="3"></a>
-            <a target="_blank" href=""><img src="images/ring3.jpg" alt="4"></a>
-            <a target="_blank" href=""><img src="images/bat.jpg" alt="2"></a>
-            <a target="_blank" href=""><img src="images/light.jpg" alt="1"></a>
-            <a target="_blank" href=""><div class="square"></div></a>
+	<script>
+    function openNav() {
+    document.getElementById("nav-js").style.width = "100%";
+    }
+</script>
+
+<div class = "navbar mobile-only">
+    <div class="title"><a href="index.html">Amick Sollenberger</a></div>
+    <span class="openbtn mobile-only" onclick="openNav()">&#8647;</span>
+</div>
+    <div class="content">
+    <script> 
+    function closeNav() {
+    document.getElementById("nav-js").style.width = "0";
+    }
+</script>
+
+<div class="side">
+    <div class="title large-only"><a href="/">Amick Sollenberger</a></div>
+      <div id="nav-js" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn mobile-only" onclick="closeNav()">&#8694;</a>
+        <p> <i>*work in progress*</i><br></p>
+        <nav>
+          <a href="/about/">About</a> <br>
+          <a href="/work/">Work</a> <br>
+          <a href="/resume/">Resume</a> <br>
+          <a href="/contact/">Contact</a> <br>
+        </nav>
+    </div>
+</div>
+
+     <div class="main">
+         
+    <div class="gallery">
+    <a target="_blank" href=""><img src="/assets/images/ring1.jpg"></a> 
+    <a target="_blank" href=""><img src="/assets/images/ring2.jpg"></a>
+    <a target="_blank" href=""><img src="/assets/images/assemble.jpg"></a>
+    <a target="_blank" href=""><img src="/assets/images/ring3.jpg"></a>
+    <a target="_blank" href=""><img src="/assets/images/bat.jpg"></a>
+    <a target="_blank" href=""><img src="/assets/images/ring4.jpg"></a>
+    <a target="_blank" href=""><img src="/assets/images/light.jpg"></a>
+    <a target="_blank" href=""><div class="square"></div></a>
+</div>
         </div>
     </div>
-  </div>
 </body>
 </html>
