@@ -1,83 +1,40 @@
 
 <!DOCTYPE html>
 <html>
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
     <title>Amick Sollenberger</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
+    <script src="function.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script> 
-        $(function(){
-            $("#nav").load("nav.html"); 
-        });
-    </script> 
+    <script>     
+    function openNav() {
+        document.getElementById("nav-js").style.width = "100%";
+    }
+    function closeNav() {
+        document.getElementById("nav-js").style.width = "0";
+    }
+    $(function(){
+        $("#navbar").load("navbar.html"); });
+    $(function(){
+        $("#sidebar").load("sidebar.html"); });
+    </script>
 </head>
 <body>
-  <div class="row">
-    <div id="nav"></div>
+<div id="navbar"></div>    
+<div class="content">
+  <div id="sidebar"></div>
     <div class="main">
-<table class="center">
-    <tr>
-      <td>
         <div class="gallery">
-          <a target="_blank" href="images/1.png">
-            <img src="images/1.png" alt="1" width="400" height="400">
-          </a>
+            <a target="_blank" href="images/1.png"><img src="images/1.png" alt="1"></a>
+            <a target="_blank" href="images/2.png"><img src="images/2.png" alt="2"></a>
+            <a target="_blank" href="images/3.png"><img src="images/3.png" alt="3"></a>
+            <a target="_blank" href="images/4.png"><img src="images/4.png" alt="4"></a>
+            <a target="_blank" href="images/3.png"><img src="images/3.png" alt="3"></a>
+            <a target="_blank" href="images/4.png"><img src="images/4.png" alt="4"></a>
+            <a target="_blank" href="images/1.png"><img src="images/1.png" alt="1"></a>
+            <a target="_blank" href="images/2.png"><img src="images/2.png" alt="2"></a>
         </div>
-      </td>
-      <td>
-        <div class="gallery">
-          <a target="_blank" href="images/2.png">
-            <img src="images/2.png" alt="2" width="400" height="400">
-          </a>
-        </div>
-      </td>
-      <td>
-        <div class="gallery">
-          <a target="_blank" href="images/3.png">
-            <img src="images/3.png" alt="3" width="400" height="400">
-          </a>
-        </div>
-      </td> 
-      <td>
-        <div class="gallery">
-          <a target="_blank" href="images/4.png">
-            <img src="images/4.png" alt="4" width="400" height="400">
-          </a>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="gallery">
-          <a target="_blank" href="images/3.png">
-            <img src="images/3.png" alt="3" width="400" height="400">
-          </a>
-        </div>
-      </td>
-      <td>
-        <div class="gallery">
-          <a target="_blank" href="images/4.png">
-            <img src="images/4.png" alt="4" width="400" height="400">
-          </a>
-        </div>
-      </td>
-      <td>
-        <div class="gallery">
-          <a target="_blank" href="images/1.png">
-            <img src="images/1.png" alt="1" width="400" height="400">
-          </a>
-        </div>
-      </td> 
-      <td>
-        <div class="gallery">
-          <a target="_blank" href="images/2.png">
-            <img src="images/2.png" alt="2" width="400" height="400">
-          </a>
-        </div>
-      </td>
-    </tr>
-  </table>
     </div>
   </div>
 </body>

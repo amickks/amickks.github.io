@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-<head>
-<title>Contact</title>
+<title>About</title>
 <link rel="stylesheet" href="style.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script> 
-        $(function(){
-            $("#nav").load("nav.html"); 
-        });
+        <script>     
+    function openNav() {
+        document.getElementById("nav-js").style.width = "100%";
+    }
+    function closeNav() {
+        document.getElementById("nav-js").style.width = "0";
+    }
+    $(function(){
+        $("#navbar").load("navbar.html"); });
+    $(function(){
+        $("#sidebar").load("sidebar.html"); });
     </script>
 </head>
 <body>
-<div class="row">
-    <div id="nav"></div>
+<div id="navbar"></div>    
+<div class="content">
+  <div id="sidebar"></div>
     <div class="main">
     Contact
     </div>
