@@ -2,7 +2,8 @@
 $text-color: black;
 $bg-color: white;
 $accent: red;
-$icon-size: 20px;
+$icon-size: 18px;
+$navbar-height:60px;
 
 body {
     font-family:sans-serif;
@@ -31,47 +32,21 @@ body {
     }
 }
 
-  .content {
-      margin:0px 20px;
-  }
-    @media (min-width: 600px) {
-      .side {
-        position:absolute;
-        width:220px;
-        text-align:left;
-        font-size: 15px;
-        padding-top:20px;
-      }
-      .main {
-        position:absolute;
-        left: 230px;
-        margin:inherit;
-      }
-    }
-    @media (max-width: 600px) {
-      .side {
-        width:0%;  
-      }
-      .main {
-        width: 100%; 
-      }
-    }
-  .navbar {
+.navbar {
     position: sticky;
     top: 0;
-    padding: 20px;
     overflow:hidden;
     a {
-        display:block;
+        color:$text-color;
+        text-decoration: none; 
+        margin:20px;
     }
   }
 
-  .title a {
+.title {
     float:left;
     font-weight:bold;
     font-size:15px;
-    text-decoration: none;
-    color:$text-color;
     @media (max-width: 600px) {
         font-size: $icon-size;
     }
@@ -84,57 +59,79 @@ body {
         @media (max-width: 600px) {
             text-decoration: none;
         }
-      }
-    }
-
-  .sidenav {
-    padding-top: 20px;
-    font-size: inherit;
-    text-align:left;
-    a {  
-        line-height: 1.75;
-        color:black;
-        font-size: inherit;
-        text-decoration: none;
-        &:hover {
-        color: $accent;
-        text-decoration: none;
-        }
-     }
-  }
-
-
-@media (max-width: 600px) {
-  .sidenav {
-    height:100%;
-    width:0;
-    position: fixed;
-    z-index: 1;
-    top:0;
-    right:0;
-    background-color: $bg-color;
-    overflow-x: hidden;
-    transition: 0.2s;
-    padding-top:40px;
-      * {
-        margin-left: 20px;}
     }
 }
-  .closebtn {
-    postion: absolute;
-    top:0;
-    font-size:$icon-size;
 
-  }
-  .openbtn {
-    cursor:pointer;
+.container {
+    margin:0px 20px;
+}
+
+.sidebar {
+    font-size: 15px;
+    padding-top:20px;
+    
+    a {  
+        color:black;
+        line-height: 1.75;
+        font-size: inherit;
+        text-decoration: none;
+        
+        &:hover {
+            color: $accent;
+            text-decoration: none;
+        }
+    }
+}
+
+.content {
+}
+
+@media (min-width: 600px) {
+    .sidebar {
+        position:absolute;
+        width:220px;
+    }
+    .content {
+        position:absolute;
+        left: 230px;
+        margin:inherit;
+    }
+}
+
+@media (max-width: 600px) {
+    .sidebar {
+        position: fixed;
+        width:0%;
+        height:100%; 
+        z-index: 1;
+        top:0;
+        right:-20px;
+        padding-left:20px;
+        background-color: $bg-color;
+        transition: 0.2s;
+        overflow:auto;
+    }
+    
+    .content {
+        width: 100%; 
+    }
+}
+.sidebar .closebtn {
+
     font-size:$icon-size;
+    line-height: 1em;
+    padding-bottom:20px;
+}
+.openbtn {
     float:right;
+    font-size:$icon-size;
+    line-height: 1em;
   }
 
 .gallery {
     display: grid;
     grid-gap:2%;
+    z-index: -1;
     
     @media (min-width: 1000px) {
         grid-template-columns: 1fr 1fr 1fr 1fr;

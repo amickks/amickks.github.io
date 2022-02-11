@@ -14,31 +14,30 @@
 </script>
 
 <div class = "navbar mobile-only">
-    <div class="title"><a href="/">Amick Sollenberger</a></div>
-    <span class="openbtn mobile-only" onclick="openNav()">&#8647;</span>
+    <a href="/" class="title" >Amick Sollenberger</a>
+    <a href="javascript:void(0)" class="openbtn mobile-only" onclick="openNav()">&#11057;</a>
 </div>
-    <div class="content">
+    <div class="container">
     <script> 
     function closeNav() {
     document.getElementById("nav-js").style.width = "0";
     }
 </script>
 
-<div class="side">
+<div id="nav-js" class="sidebar">
     <div class="title large-only"><a href="/">Amick Sollenberger</a></div>
-      <div id="nav-js" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn mobile-only" onclick="closeNav()">&#8694;</a>
-        <p> <i>*work in progress*</i><br></p>
-        <nav>
-          <a href="/about/">About</a> <br>
-          <a href="/work/">Work</a> <br>
-          <a href="/resume/">Resume</a> <br>
-          <a href="/contact/">Contact</a> <br>
-        </nav>
-    </div>
+    <a href="javascript:void(0)" class="closebtn mobile-only" onclick="closeNav()">&#8694;</a><br>
+    <p><i>*work in progress*</i></p>
+    <nav>
+        <a href="/about/">About</a> <br>
+        <a href="/work/">Work</a> <br>
+        <a href="/resume/">Resume</a> <br>
+        <a href="/contact/">Contact</a> <br>
+    </nav>
 </div>
 
-     <div class="main">
+
+     <div class="content">
          
     <h3 id="contact">Contact</h3>
 
