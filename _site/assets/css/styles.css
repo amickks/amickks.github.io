@@ -1,4 +1,4 @@
-body { font-family: sans-serif; text-transform: uppercase; letter-spacing: 1px; background-color: white; padding: 0px; margin: 0px; }
+body { font-family: sans-serif; text-transform: uppercase; background-color: white; padding: 0px; margin: 0px; }
 
 h1, h2, h3 { font-size: 18px; color: black; }
 
@@ -9,16 +9,14 @@ p { font-size: 15px; }
 .navbar { position: sticky; top: 0; overflow: hidden; }
 .navbar a { color: black; text-decoration: none; margin: 20px; }
 
-.title { float: left; font-weight: bold; font-size: 15px; }
+.title { float: left; font-size: 15px; text-decoration: underline; text-decoration-style: wavy; text-decoration-color: red; text-underline-position: below; text-decoration-thickness: 1.5px; color: black; }
 @media (max-width: 600px) { .title { font-size: 18px; } }
-.title:hover { text-decoration: underline; text-decoration-style: wavy; text-underline-position: below; color: black; }
-@media (max-width: 600px) { .title:hover { text-decoration: none; } }
 
 .container { margin: 0px 20px; }
 
 .sidebar { font-size: 15px; padding-top: 20px; }
 .sidebar a { color: black; line-height: 1.75; font-size: inherit; text-decoration: none; }
-.sidebar a:hover { color: red; text-decoration: none; }
+.sidebar a:hover { font-style: italic; }
 
 @media (min-width: 600px) { .sidebar { position: absolute; width: 220px; }
   .content { position: absolute; left: 230px; margin: inherit; } }
@@ -32,6 +30,5 @@ p { font-size: 15px; }
 @media (min-width: 1000px) { .gallery { grid-template-columns: 1fr 1fr 1fr 1fr; } }
 @media (min-width: 600px) and (max-width: 1000px) { .gallery { grid-template-columns: 1fr 1fr 1fr; } }
 @media (max-width: 600px) { .gallery { grid-template-columns: 1fr 1fr; } }
-.gallery img { /*  vertical-align: middle;*/ width: 100%; user-select: none; }
-.gallery img :hover { opacity: 90%; }
+.gallery img { width: 100%; user-select: none; outline-style: dotted; outline-width: 1px; outline-color: red; }
 .gallery .square { background-color: gainsboro; width: 100%; height: 100%; user-select: none; }

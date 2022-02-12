@@ -8,7 +8,7 @@ $navbar-height:60px;
 body {
     font-family:sans-serif;
     text-transform: uppercase;
-    letter-spacing: 1px;
+//    letter-spacing: 1px;
     background-color: $bg-color;
     padding:0px;
     margin: 0px;
@@ -45,20 +45,27 @@ body {
 
 .title {
     float:left;
-    font-weight:bold;
     font-size:15px;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: $accent;
+    text-underline-position:below;
+    text-decoration-thickness: 1.5px;
+    color:$text-color;
     @media (max-width: 600px) {
         font-size: $icon-size;
     }
     &:hover {
-        text-decoration: underline;
-        text-decoration-style: wavy; 
-        text-underline-position:below;
-        color:$text-color;
+//        text-decoration: underline;
+//        text-decoration-style: wavy;
+//        text-decoration-color: $accent;
+//        text-underline-position:below;
+//        text-decoration-thickness: 1.5px;
+//        color:$text-color;
         
-        @media (max-width: 600px) {
-            text-decoration: none;
-        }
+//        @media (max-width: 600px) {
+//            text-decoration: none;
+//        }
     }
 }
 
@@ -77,8 +84,12 @@ body {
         text-decoration: none;
         
         &:hover {
-            color: $accent;
-            text-decoration: none;
+//            color: $accent;
+            font-style: italic;
+//            text-decoration:line-through;
+//            text-decoration-style:wavy;
+//            text-decoration-thickness: 1px; 
+//            text-decoration-color: $accent;
         }
     }
 }
@@ -143,11 +154,13 @@ body {
         grid-template-columns: 1fr 1fr;
     }
     img {
-        /*  vertical-align: middle;*/
         width: 100%;
         user-select: none;
-        :hover{
-            opacity: 90%; 
+        outline-style:dotted;
+        outline-width: 1px;
+        outline-color: $accent;
+        &:hover{
+
         }
     }
     .square {  
