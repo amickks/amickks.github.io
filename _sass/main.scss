@@ -69,6 +69,9 @@ body {
 //            text-decoration: none;
 //        }
     }
+    @media (min-width: 600px) {
+        padding-bottom: 60px;
+    }
 }
 
 .container {
@@ -80,6 +83,7 @@ body {
     padding-top:20px;
     
     a {  
+        color:$text-color;
         line-height: 1.75;
         font-size: inherit;
         text-decoration: none;
@@ -157,9 +161,11 @@ body {
     img {
         width: 100%;
         user-select: none;
-        border-style: none dotted dotted none;
-        border-width: 3px;
-        border-color: $bg-color;
+        border-style:solid;
+        border-width:1px;
+//        border-style: none dotted dotted none;
+//        border-width: 3px;
+        border-color: black;
         &:hover{
 
         }
@@ -179,6 +185,9 @@ body {
     
     img {
         width: 100%;
+        border-style:solid;
+        border-width:1px;
+        border-color: black;
     }
     .main {
         grid-row-end: span 4;
