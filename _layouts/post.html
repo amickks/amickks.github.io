@@ -4,7 +4,21 @@ layout: default
 {% if page.title%}
 	<h1>{{page.title}}</h1>
 {% else %}
-	<h1>Untitled post</h1>
+	<h1>Untitled</h1>
 {% endif %}
-{{ page.date | date: "%b %d, %Y" }}
+<i>{{ page.date | date: "%B %Y" }}</i>
+
+{% if page.medium%}
+    <p>{{page.medium}}</p>
+{% endif %}
+
+{% if page.image%}
+<div class = "project">
+    <img src= "{{page.image}}" class ="main" style="grid-row-end: span 4;">
+    <img src= "{{page.image}}" class ="main">
+    <img src= "{{page.image}}" class ="main">
+</div>
+
+{% endif %}
+
 {{ content }}
