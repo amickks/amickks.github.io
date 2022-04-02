@@ -6,16 +6,17 @@ $icon-size: 18px;
 $navbar-height:60px;
 
 body {
-    font-family:sans-serif;
+    font-family:monospace;
     text-transform: uppercase;
 //    letter-spacing: 1px;
     background-color: $bg-color;
     padding:0px;
     margin: 0px;
+    color: $text-color;
+    
 }
     h1,h2,h3 {
-    font-size: 18px;
-    color: $text-color;
+    font-size: 18px;  
     }
     p {
     font-size: 15px;
@@ -45,13 +46,13 @@ body {
 
 .title {
     float:left;
-    font-size:15px;
+    font-size:18px;
     text-decoration: underline;
     text-decoration-style: wavy;
     text-decoration-color: $accent;
     text-underline-position:below;
-//    text-decoration-thickness: 1.5px;
-    color:$text-color;
+    text-decoration-thickness: 1.5px;
+    color:$accent;
     @media (max-width: 600px) {
         font-size: $icon-size;
     }
@@ -79,7 +80,6 @@ body {
     padding-top:20px;
     
     a {  
-        color:black;
         line-height: 1.75;
         font-size: inherit;
         text-decoration: none;
@@ -142,7 +142,7 @@ body {
 
 .gallery {
     display: grid;
-    grid-gap:2%;
+    gap:2%;
     z-index: -1;
     
     @media (min-width: 1000px) {
@@ -157,9 +157,9 @@ body {
     img {
         width: 100%;
         user-select: none;
-        outline-style:dotted;
-        outline-width: 1px;
-        outline-color: $accent;
+        border-style: none dotted dotted none;
+        border-width: 3px;
+        border-color: $bg-color;
         &:hover{
 
         }
@@ -177,6 +177,13 @@ body {
     display: grid;
     gap:20px;
     
+    img {
+        width: 100%;
+    }
+    .main {
+        grid-row-end: span 4;
+    }
+    
     @media (min-width: 1000px) {
         grid-template-columns: auto 150px;
     }
@@ -184,11 +191,11 @@ body {
         grid-template-columns: auto 100px;
     }
     @media (max-width: 600px) {
-        grid-template-columns: auto;
-    }  
-
-    img {
-        width: 100%;
+        grid-template-columns: auto auto auto auto;
+        .main {
+            grid-column-start: 1;
+            grid-column-end: 5;
+         }
     }
 }
 

@@ -1,6 +1,6 @@
-body { font-family: sans-serif; text-transform: uppercase; background-color: white; padding: 0px; margin: 0px; }
+body { font-family: monospace; text-transform: uppercase; background-color: white; padding: 0px; margin: 0px; color: black; }
 
-h1, h2, h3 { font-size: 18px; color: black; }
+h1, h2, h3 { font-size: 18px; }
 
 p { font-size: 15px; }
 
@@ -9,14 +9,14 @@ p { font-size: 15px; }
 .navbar { position: sticky; top: 0; overflow: hidden; }
 .navbar a { color: black; text-decoration: none; margin: 20px; }
 
-.title { float: left; font-size: 15px; text-decoration: underline; text-decoration-style: wavy; text-decoration-color: red; text-underline-position: below; color: black; }
+.title { float: left; font-size: 18px; text-decoration: underline; text-decoration-style: wavy; text-decoration-color: red; text-underline-position: below; text-decoration-thickness: 1.5px; color: red; }
 @media (max-width: 600px) { .title { font-size: 18px; } }
 .title:hover { font-style: normal; }
 
 .container { margin: 0px 20px; }
 
 .sidebar { font-size: 15px; padding-top: 20px; }
-.sidebar a { color: black; line-height: 1.75; font-size: inherit; text-decoration: none; }
+.sidebar a { line-height: 1.75; font-size: inherit; text-decoration: none; }
 .sidebar a:hover { font-style: italic; }
 
 @media (min-width: 600px) { .sidebar { position: absolute; width: 220px; }
@@ -27,16 +27,18 @@ p { font-size: 15px; }
 
 .openbtn { float: right; font-size: 18px; line-height: 1em; }
 
-.gallery { display: grid; grid-gap: 2%; z-index: -1; }
+.gallery { display: grid; gap: 2%; z-index: -1; }
 @media (min-width: 1000px) { .gallery { grid-template-columns: 1fr 1fr 1fr 1fr; } }
 @media (min-width: 600px) and (max-width: 1000px) { .gallery { grid-template-columns: 1fr 1fr 1fr; } }
 @media (max-width: 600px) { .gallery { grid-template-columns: 1fr 1fr; } }
-.gallery img { width: 100%; user-select: none; outline-style: dotted; outline-width: 1px; outline-color: red; }
+.gallery img { width: 100%; user-select: none; border-style: none dotted dotted none; border-width: 3px; border-color: white; }
 
 .square { background-color: gainsboro; width: 100%; height: 100%; user-select: none; }
 
 .project { display: grid; gap: 20px; }
+.project img { width: 100%; }
+.project .main { grid-row-end: span 4; }
 @media (min-width: 1000px) { .project { grid-template-columns: auto 150px; } }
 @media (min-width: 600px) and (max-width: 1000px) { .project { grid-template-columns: auto 100px; } }
-@media (max-width: 600px) { .project { grid-template-columns: auto; } }
-.project img { width: 100%; }
+@media (max-width: 600px) { .project { grid-template-columns: auto auto auto auto; }
+  .project .main { grid-column-start: 1; grid-column-end: 5; } }
