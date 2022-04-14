@@ -6,10 +6,10 @@ layout: default
 {% else %}
 	<h1>Untitled</h1>
 {% endif %}
-<i>{{ page.date | date: "%B %Y" }}</i>
+<h3><i>{{ page.date | date: "%B %Y" }}</i></h3>
 
 {% if page.medium%}
-    <p>{{page.medium}}</p>
+    <h3>{{page.medium}}<h3>
 {% endif %}
 
 {% if page.image%}
