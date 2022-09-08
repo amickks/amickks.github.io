@@ -1,0 +1,11 @@
+---
+layout: default
+---
+<div class="gallery">
+    {% for post in site.categories[page.group] %}
+        <a href="{{ post.url | relative_url }}">
+            <img src="{{post.image}}" alt = "">
+        </a>
+    {% endfor %}
+
+</div>

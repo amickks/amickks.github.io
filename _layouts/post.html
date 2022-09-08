@@ -8,6 +8,10 @@ layout: default
 {% endif %}
 <h3><i>{{ page.date | date: "%B %Y" }}</i></h3>
 
+{% if page.location%}
+    <h3>{{page.location}}<h3>
+{% endif %}
+        
 {% if page.medium%}
     <h3>{{page.medium}}<h3>
 {% endif %}
@@ -15,10 +19,12 @@ layout: default
 {% if page.image%}
 <div class = "project">
     <img src= "{{page.image}}" class ="main">
-    <img src= "{{page.image}}" >
-    <img src= "{{page.image}}" >
+    {% for image in site.static_files %}
+        {% if image.path contains page.images %}
+            <img src="{{site.baseurl}}{{image.path}}" alt="image" />
+        {% endif %}
+    {% endfor %}
 </div>
-
 {% endif %}
 
 {{ content }}
