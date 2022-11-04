@@ -5,6 +5,7 @@ $accent: red;
 $icon-size: 18px;
 $navbar-height:60px;
 
+
 body {
     font-family:monospace;
     text-transform: lowercase;
@@ -51,7 +52,7 @@ body {
     a {
         color:$text-color;
         text-decoration: none; 
-        margin:20px;
+        padding:20px;
     }
   }
 
@@ -87,12 +88,13 @@ body {
 }
 
 .container {
-    margin:0px 20px;
+    width:100vw;
 }
 
 .sidebar {
     font-size: 15px;
-    padding-top:20px;
+    padding: 20px;
+    float:left;
     
     a {  
         color:$text-color;
@@ -112,18 +114,20 @@ body {
 }
 
 .content {
+    
 }
 
 @media (min-width: 600px) {
     .sidebar {
         position:absolute;
-        width:220px;
+        width:240px;
     }
     .content {
         position:absolute;
-        left: 230px;
+        left: 240px;
         margin:inherit;
-        padding-top: 10px;
+        margin: 10px;
+        width: calc(100% - 260px);
     }
 }
 
@@ -134,16 +138,17 @@ body {
         height:100%; 
         z-index: 1;
         top:0;
-        right:-20px;
-        padding-left:20px;
+        right:-40px;
+        margin-left: 60px;
+        padding-left: 40px;
         background-color: $bg-color;
         transition: 0.2s;
         overflow:auto;
     }
     
     .content {
-        width: 100%; 
-        padding-top: 0px;
+        width: calc(100% - 40px); 
+        margin: 0 20px;
     }
 }
 .sidebar .closebtn {
@@ -160,8 +165,9 @@ body {
 
 .gallery {
     display: grid;
-    gap:2%;
+    gap:2%;  
     z-index: -1;
+    width: 100%;
     
     @media (min-width: 1000px) {
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -172,19 +178,23 @@ body {
     @media (max-width: 600px) {
         grid-template-columns: 1fr 1fr;
     }
-    img {
-        width: 100%;
-        user-select: none;
+    .imgbox {
+        width:100%;
+        padding-bottom: 100%;
+        box-sizing: border-box;
         border-style:solid;
         border-width:1px;
-//        border-style: none dotted dotted none;
-//        border-width: 3px;
         border-color: black;
+        background-position: center center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        background-size: cover; 
         &:hover{
 
         }
-    }
+    }  
 }
+
 
 
 

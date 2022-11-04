@@ -3,14 +3,11 @@ layout: default
 ---
 <div class="gallery">
     {% for post in site.posts %}
-        <a href="{{ post.url | relative_url }}">
-            <img src="{{post.image}}" alt = "">
+    <a href="{{ post.url | relative_url }}">
+    <div class="imgbox"
+         style="background-image:url('{{post.image}}')">
+    </div> 
         </a>
     {% endfor %}
-<!--
-    {% for image in site.static_files %}
-    <a href="/project"><img src="{{ image.path }}" alt=""></a>
-    {% endfor %}
--->
 
 </div>
