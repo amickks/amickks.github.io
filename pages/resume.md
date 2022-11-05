@@ -4,4 +4,4 @@ title: Resume
 permalink: /resume/
 ---
 
-### Resume ###
+not here just yet.

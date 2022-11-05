@@ -1,14 +1,14 @@
 // main.scss
 $text-color: black;
 $bg-color: white;
-$accent: red;
+$accent: chocolate;
 $icon-size: 18px;
 $navbar-height:60px;
 
 
 body {
     font-family:monospace;
-    text-transform: lowercase;
+//    text-transform: lowercase;
 //    letter-spacing: 1px;
     background-color: $bg-color;
     padding:0px;
@@ -50,32 +50,35 @@ body {
     top: 0;
     overflow:hidden;
     a {
+        text-transform: lowercase;
         color:$text-color;
         text-decoration: none; 
         padding:20px;
     }
   }
 
-.title {
+#title a{
     float:left;
+    font-style: normal;
     text-transform: uppercase;
     font-size:18px;
-    text-decoration: underline;
-    text-decoration-style: wavy;
-    text-decoration-color: $accent;
-    text-underline-position:below;
-    text-decoration-thickness: 1.5px;
-    color:$accent;
+    text-decoration: none;
+    color:$text-color;
+//    text-decoration-style: wavy;
+//    text-decoration-color: $accent;
+//    text-underline-position:below;
+//    text-decoration-thickness: 1.5px;
+    
     @media (max-width: 600px) {
         font-size: $icon-size;
     }
     &:hover {
         font-style: normal;
-//        text-decoration: underline;
-//        text-decoration-style: wavy;
-//        text-decoration-color: $accent;
-//        text-underline-position:below;
-//        text-decoration-thickness: 1.5px;
+        text-decoration: underline;
+        text-decoration-style: wavy;
+        text-decoration-color: $accent;
+        text-underline-position:below;
+        text-decoration-thickness: 1.5px;
 //        color:$text-color;
         
 //        @media (max-width: 600px) {
@@ -92,35 +95,37 @@ body {
 }
 
 .sidebar {
+    height:100%;
     font-size: 15px;
-    padding: 20px;
     float:left;
-    
-    a {  
+//    background-color: beige;
+    .menu {  
+        a{
         color:$text-color;
         line-height: 1.75;
         font-size: inherit;
         text-decoration: none;
         
         &:hover {
-//            color: $accent;
             font-style: italic;
-//            text-decoration:line-through;
+            text-decoration:none;
 //            text-decoration-style:wavy;
 //            text-decoration-thickness: 1px; 
 //            text-decoration-color: $accent;
         }
     }
+    }
 }
 
 .content {
-    
+
 }
 
 @media (min-width: 600px) {
     .sidebar {
         position:absolute;
-        width:240px;
+        width:200px;
+        padding: 20px;
     }
     .content {
         position:absolute;
@@ -152,7 +157,6 @@ body {
     }
 }
 .sidebar .closebtn {
-
     font-size:$icon-size;
     line-height: 1em;
     padding-bottom:20px;
@@ -190,15 +194,21 @@ body {
         overflow: hidden;
         background-size: cover; 
         &:hover{
-
+            opacity: 80%;
         }
     }  
 }
-
-
-
-
-
+.page {
+    
+    img {
+        width:70%;
+        border-style:solid;
+        border-width:1px;
+        border-color: black;
+        box-sizing: border-box;
+        margin-bottom:10px;
+    }
+}
 
 .project {
     display: grid;
@@ -209,6 +219,7 @@ body {
         border-style:solid;
         border-width:1px;
         border-color: black;
+        box-sizing: border-box;
     }
     .main {
         grid-row-end: span 4;
@@ -229,4 +240,37 @@ body {
     }
 }
 
+.pagelist {
+
+    .card {
+        width:100%;
+        height: 150px;
+        border-style:solid;
+        border-width:1px;
+        border-color: black;
+        box-sizing: border-box;
+        margin-top: 10px;
+        
+        img {
+            height:100%;
+            width:auto;
+            border-style:solid;
+            border-width:1px;
+            border-color: black;
+            box-sizing: border-box;
+        }
+        .desc {
+            display:block;
+            margin:10px;
+        }
+    }
+}
+.pagelist .card:nth-child(odd) img {
+    float:left;
+    clear:left;  
+}
+.pagelist .card:nth-child(even) img {    
+    float:right;
+    clear:right;  
+}
 
