@@ -41,10 +41,10 @@ p { font-size: 15px; text-transform: none; }
 .gallery .imgbox:hover { opacity: 80%; }
 
 .gallery2 { z-index: -1; font-size: 0; display: flex; flex-flow: column wrap; }
-@media (min-width: 1000px) { .gallery2 { width: calc(25%); height: 50vw; } }
-@media (min-width: 600px) and (max-width: 1000px) { .gallery2 { width: calc(33% + 2px); height: 90vw; } }
+@media (min-width: 1000px) { .gallery2 { width: calc(25%); height: 70vw; } }
+@media (min-width: 600px) and (max-width: 1000px) { .gallery2 { width: calc(33% + 2px); height: 100vw; } }
 @media (max-width: 600px) { .gallery2 { width: calc(50% + 4px); height: 280vw; } }
-.gallery2 .imgbox { box-sizing: border-box; border-style: solid; border-width: 1px; border-color: black; margin-bottom: 8px; margin-right: 8px; flex: 1 1 10px; }
+.gallery2 .imgbox { box-sizing: border-box; border-style: solid; border-width: 1px; border-color: black; margin-bottom: 8px; margin-right: 8px; flex: 1 1 15px; }
 .gallery2 .imgbox img { width: 100%; height: auto; margin: 0; }
 
 .page img { width: 70%; border-style: solid; border-width: 1px; border-color: black; box-sizing: border-box; margin-bottom: 10px; }

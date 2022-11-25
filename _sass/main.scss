@@ -216,11 +216,11 @@ body {
     
             @media (min-width: 1000px) {
             width: calc(25%);
-            height:50vw;
+            height:70vw;
         }
         @media (min-width: 600px) and (max-width: 1000px){
             width: calc(33% + 2px);
-            height:90vw;
+            height:100vw;
         }
         @media (max-width: 600px) {
             width: calc(50% + 4px);
@@ -238,7 +238,7 @@ body {
         border-color: black;
         margin-bottom: 8px;
         margin-right: 8px;
-        flex:1 1 10px;
+        flex:1 1 15px;
     }
 }
 .page {
