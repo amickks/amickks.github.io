@@ -2,11 +2,11 @@
 layout: default
 title: "Amick Sollenberger"
 ---
-<div class="gallery">
+<div class="gallery2">
     {% for post in site.posts %}
     <a href="{{ post.url | relative_url }}">
-    <div class="imgbox"
-         style="background-image:url('{{post.image}}')">
+    <div class="imgbox" >
+           <img src={{post.image}} alt="">  
     </div> 
     </a>
     {% endfor %}

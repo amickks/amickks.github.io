@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>flapping wing robot</title>
+    <title>Bat-inspired flapping-wing robot</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
 
 <div class = "navbar mobile-only">
     <div id="title"><a href="/" >Amick Sollenberger</a></div>
-    <a href="javascript:void(0)" class="openbtn mobile-only" onclick="openNav()">&#11057;</a>
+    <a href="javascript:void(0)" id="openbtn" class="mobile-only" onclick="openNav()">&#11057;</a>
 </div>
     <div class="container">
     <script> 
@@ -26,7 +26,7 @@
 
 <div id="nav-js" class="sidebar">
     <div id="title" class="large-only"><a href="/">Amick Sollenberger</a></div>
-    <a href="javascript:void(0)" class="closebtn mobile-only" onclick="closeNav()">&#8694;</a>
+    <a href="javascript:void(0)" id="closebtn" class="mobile-only" onclick="closeNav()">&#8694;</a>
     <br>
     <nav>
         <div class="menu">
@@ -47,9 +47,9 @@
         <div class="content">
          
     
-	<h1>flapping wing robot</h1>
+	<h1>Bat-inspired flapping-wing robot</h1>
 
-<h3><i>May 2022</i></h3>
+<h3><i>July 2021</i></h3>
 
 
     <h3>Breuer Lab, Brown University<h3>
@@ -62,6 +62,24 @@
 
 <div class = "project">
     <img src= "/assets/images/roBat/robat.jpg" class ="main">
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
     
         
     
@@ -105,10 +123,23 @@
     
         
     
+        
+    
+        
+    
+        
+    
 </div>
 
 
-
+<p>I began working in Breuer lab in the summer of 2021. As a part of a research award, I worked with another undergraduate to help assemble and troubleshoot the design of a flapping-wing bad-inspired robot. 
+The summer began with working on an older robot which relied on a cam mechanism to reproduce the wing motions of a bat in flight.
+(image)
+This was no trivial task, involving rewiring many of the cams and adjusting the tension to produce the correct range of motion. Then, I designed a forearm and “hand” so that the robot could be used as a demonstration model. I designed the wing on Fusion360 and fabricated using 3d-printed resin and laser cut acrylic.
+(image)
+The assembly of the new robot began with more fabrication work– sanding and filing of 3d printed parts, lasercutting acrylic and balsa wood for the wings, developing a method for glueing the kite cloth and struts to the wings, etc.
+(image)
+Once assembled, my coworker and I learned to use the Galil motor controller and force transducer DAQ, assembling these into a MATLAB script which we used to measure forces on the wings while flappin on the bench. Eventually, we moved this arrangement to the windtunnel, where we were able to determine the lift and drag at different wind speeds, flapping frequencies and angles of attack.</p>
 
 
         </div>

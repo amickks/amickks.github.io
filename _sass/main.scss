@@ -26,12 +26,13 @@ body {
     font-size: 18px;
     }
     h3 {
-//    text-transform: uppercase;
+    text-transform: uppercase;
     font-weight: normal;
     font-size: inherit;
     }
     p {
     font-size: 15px;
+    text-transform: none;
     }
 
 @media (min-width: 600px) {
@@ -146,7 +147,7 @@ body {
         right:-40px;
         margin-left: 60px;
         padding-left: 40px;
-        background-color: $bg-color;
+        background-color:beige;
         transition: 0.2s;
         overflow:auto;
     }
@@ -156,12 +157,14 @@ body {
         margin: 0 20px;
     }
 }
-.sidebar .closebtn {
+.sidebar #closebtn {
     font-size:$icon-size;
     line-height: 1em;
     padding-bottom:20px;
+    text-decoration: none;
+    color: $text-color;
 }
-.openbtn {
+#openbtn {
     float:right;
     font-size:$icon-size;
     line-height: 1em;
@@ -183,8 +186,15 @@ body {
         grid-template-columns: 1fr 1fr;
     }
     .imgbox {
+        display:flex;
+        img {
+            width: 100%;
+            height:auto;
+            margin:0;
+        }
         width:100%;
-        padding-bottom: 100%;
+        height:auto;
+//        padding-bottom: 100%;
         box-sizing: border-box;
         border-style:solid;
         border-width:1px;
@@ -197,6 +207,39 @@ body {
             opacity: 80%;
         }
     }  
+}
+.gallery2 { 
+    z-index: -1;
+    font-size:0;  
+    display:flex;
+    flex-flow: column wrap;
+    
+            @media (min-width: 1000px) {
+            width: calc(25%);
+            height:50vw;
+        }
+        @media (min-width: 600px) and (max-width: 1000px){
+            width: calc(33% + 2px);
+            height:90vw;
+        }
+        @media (max-width: 600px) {
+            width: calc(50% + 4px);
+            height:280vw;
+        }
+    .imgbox {
+        img {
+            width: 100%;
+            height:auto;
+            margin:0;
+        }
+        box-sizing: border-box;
+        border-style:solid;
+        border-width:1px;
+        border-color: black;
+        margin-bottom: 8px;
+        margin-right: 8px;
+        flex:1 1 10px;
+    }
 }
 .page {
     
@@ -251,6 +294,7 @@ body {
         border-color: black;
         box-sizing: border-box;
         margin-top: 10px;
+        display:block;
         
         img {
             height:150px;
@@ -260,7 +304,7 @@ body {
             border-color: black;
             box-sizing: border-box;
         }
-        .desc {
+        .desc {    
             box-sizing: border-box;
             display:block;
             margin:10px;
@@ -269,7 +313,8 @@ body {
 }
 .pagelist .card:nth-child(odd) img {
     float:left;
-    clear:left;  
+    clear:left; 
+    margin-right: 10px;
 }
 .pagelist .card:nth-child(even) img {    
     float:right;
