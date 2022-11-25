@@ -1,4 +1,4 @@
-body { font-family: monospace; background-color: white; padding: 0px; margin: 0px; color: black; }
+body { font-family: monospace; background-color: white; padding: 0px; margin: 0px; }
 
 h1 { text-transform: uppercase; font-size: 18px; }
 
@@ -10,25 +10,27 @@ p { font-size: 15px; text-transform: none; }
 
 @media (min-width: 600px) { .mobile-only { display: none; } }
 @media (max-width: 600px) { .large-only { display: none; } }
-.navbar { position: sticky; top: 0; overflow: hidden; }
+.navbar { top: 0; overflow: hidden; background-color: white; }
 .navbar a { text-transform: lowercase; color: black; text-decoration: none; padding: 20px; }
 
 #title a { float: left; font-style: normal; text-transform: uppercase; font-size: 18px; text-decoration: none; color: black; }
 @media (max-width: 600px) { #title a { font-size: 18px; } }
-#title a:hover { font-style: normal; text-decoration: underline; text-decoration-style: wavy; text-decoration-color: chocolate; text-underline-position: below; text-decoration-thickness: 1.5px; }
+#title a:hover { font-style: normal; text-decoration: underline; text-decoration-style: wavy; text-decoration-color: orangered; text-underline-position: below; text-decoration-thickness: 1.5px; }
 @media (min-width: 600px) { #title a { padding-bottom: 60px; } }
 
 .container { width: 100vw; }
 
 .sidebar { height: 100%; font-size: 15px; float: left; }
-.sidebar .menu a { color: black; line-height: 1.75; font-size: inherit; text-decoration: none; }
+.sidebar .menu a { line-height: 1.75; font-size: inherit; text-decoration: none; }
 .sidebar .menu a:hover { font-style: italic; text-decoration: none; }
 
 @media (min-width: 600px) { .sidebar { position: absolute; width: 200px; padding: 20px; }
+  .sidebar a { color: black; }
   .content { position: absolute; left: 240px; margin: inherit; margin: 10px; width: calc(100% - 260px); } }
-@media (max-width: 600px) { .sidebar { position: fixed; width: 0%; height: 100%; z-index: 1; top: 0; right: -40px; margin-left: 60px; padding-left: 40px; background-color: beige; transition: 0.2s; overflow: auto; }
+@media (max-width: 600px) { .sidebar { position: fixed; width: 0%; height: 100%; z-index: 1; top: 0; right: -40px; margin-left: 60px; padding-left: 40px; transition: 0.2s; overflow: auto; background-color: orangered; }
+  .sidebar a { color: white; }
   .content { width: calc(100% - 40px); margin: 0 20px; } }
-.sidebar #closebtn { font-size: 18px; line-height: 1em; padding-bottom: 20px; text-decoration: none; color: black; }
+.sidebar #closebtn { font-size: 30px; line-height: 2em; padding-bottom: 20px; text-decoration: none; color: white; font-weight: normal; }
 
 #openbtn { float: right; font-size: 18px; line-height: 1em; }
 
@@ -36,7 +38,7 @@ p { font-size: 15px; text-transform: none; }
 @media (min-width: 1000px) { .gallery { grid-template-columns: 1fr 1fr 1fr 1fr; } }
 @media (min-width: 600px) and (max-width: 1000px) { .gallery { grid-template-columns: 1fr 1fr 1fr; } }
 @media (max-width: 600px) { .gallery { grid-template-columns: 1fr 1fr; } }
-.gallery .imgbox { display: flex; width: 100%; height: auto; box-sizing: border-box; border-style: solid; border-width: 1px; border-color: black; background-position: center center; background-repeat: no-repeat; overflow: hidden; background-size: cover; }
+.gallery .imgbox { display: flex; width: 100%; height: auto; box-sizing: border-box; border-style: solid; border-width: 1px; border-color: lightskyblue; background-position: center center; background-repeat: no-repeat; overflow: hidden; background-size: cover; }
 .gallery .imgbox img { width: 100%; height: auto; margin: 0; }
 .gallery .imgbox:hover { opacity: 80%; }
 
@@ -44,21 +46,21 @@ p { font-size: 15px; text-transform: none; }
 @media (min-width: 1000px) { .gallery2 { width: calc(25%); height: 70vw; } }
 @media (min-width: 600px) and (max-width: 1000px) { .gallery2 { width: calc(33% + 2px); height: 100vw; } }
 @media (max-width: 600px) { .gallery2 { width: calc(50% + 4px); height: 280vw; } }
-.gallery2 .imgbox { box-sizing: border-box; border-style: solid; border-width: 1px; border-color: black; margin-bottom: 8px; margin-right: 8px; flex: 1 1 15px; }
+.gallery2 .imgbox { box-sizing: border-box; border-style: solid; border-width: 1px; border-color: lightskyblue; margin-bottom: 8px; margin-right: 8px; flex: 1 1 10px; }
 .gallery2 .imgbox img { width: 100%; height: auto; margin: 0; }
 
-.page img { width: 70%; border-style: solid; border-width: 1px; border-color: black; box-sizing: border-box; margin-bottom: 10px; }
+.page img { width: 70%; border-style: solid; border-width: 1px; border-color: lightskyblue; box-sizing: border-box; margin-bottom: 10px; }
 
 .project { display: grid; gap: 20px; }
-.project img { width: 100%; border-style: solid; border-width: 1px; border-color: black; box-sizing: border-box; }
+.project img { width: 100%; border-style: solid; border-width: 1px; border-color: lightskyblue; box-sizing: border-box; }
 .project .main { grid-row-end: span 4; }
 @media (min-width: 1000px) { .project { grid-template-columns: auto 150px; } }
 @media (min-width: 600px) and (max-width: 1000px) { .project { grid-template-columns: auto 100px; } }
 @media (max-width: 600px) { .project { grid-template-columns: auto auto auto auto; }
   .project .main { grid-column-start: 1; grid-column-end: 5; } }
 
-.pagelist .card { width: 100%; min-height: 152px; height: auto; border-style: solid; border-width: 1px; border-color: black; box-sizing: border-box; margin-top: 10px; display: block; }
-.pagelist .card img { height: 150px; width: auto; border-style: solid; border-width: 1px; border-color: black; box-sizing: border-box; }
+.pagelist .card { width: 100%; min-height: 152px; height: auto; border-style: solid; border-width: 1px; border-color: lightskyblue; box-sizing: border-box; margin-top: 10px; display: block; }
+.pagelist .card img { height: 150px; width: auto; border-style: solid; border-width: 1px; border-color: lightskyblue; box-sizing: border-box; }
 .pagelist .card .desc { box-sizing: border-box; display: block; margin: 10px; }
 
 .pagelist .card:nth-child(odd) img { float: left; clear: left; margin-right: 10px; }
