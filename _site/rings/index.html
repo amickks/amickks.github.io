@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>kinetic rings</title>
+    <title>Kinetic rings</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
+    <script src="/assets/function.js"></script>
 </head>
 <body>
 	<script>
@@ -18,10 +19,11 @@
     <a href="javascript:void(0)" id="openbtn" class="mobile-only" onclick="openNav()">&#11057;</a>
 </div>
     <div class="container">
-    <script> 
-    function closeNav() {
+    <script>
+function closeNav() {
+    "use strict";
     document.getElementById("nav-js").style.width = "0";
-    }
+}
 </script>
 
 <div id="nav-js" class="sidebar">
@@ -41,8 +43,17 @@
 
         <div class="content">
          
-    
-	<h1>kinetic rings</h1>
+    <script>
+function activateImg(imgs) {
+  // Get the expanded image
+  var activatedImg = document.getElementById("activeImg");
+  // Use the same src in the expanded image as the image being clicked on from the grid
+  activatedImg.src = imgs.src;
+  } 
+</script>
+
+
+	<h1>Kinetic rings</h1>
 
 <h3><i>November 2020</i></h3>
 
@@ -53,8 +64,8 @@
 
 
 
-<div class = "project">
-    <img src= "/assets/images/rings/ring1.jpg" class ="main">
+<div class="project">
+    <img id="activeImg" class="main" src="/assets/images/rings/ring1.jpg">
     
         
     
@@ -87,24 +98,6 @@
         
     
         
-            <img src="/assets/images/rings/ring1.jpg" alt="image" />
-        
-    
-        
-            <img src="/assets/images/rings/ring2.jpg" alt="image" />
-        
-    
-        
-            <img src="/assets/images/rings/ring3.jpg" alt="image" />
-        
-    
-        
-            <img src="/assets/images/rings/ring4.jpg" alt="image" />
-        
-    
-        
-            <img src="/assets/images/rings/ring5.jpg" alt="image" />
-        
     
         
     
@@ -121,6 +114,26 @@
         
     
         
+            <img src="/assets/images/rings/ring1.jpg" alt="image" onclick="activateImg(this);" >
+        
+    
+        
+            <img src="/assets/images/rings/ring2.jpg" alt="image" onclick="activateImg(this);" >
+        
+    
+        
+            <img src="/assets/images/rings/ring3.jpg" alt="image" onclick="activateImg(this);" >
+        
+    
+        
+            <img src="/assets/images/rings/ring5.jpg" alt="image" onclick="activateImg(this);" >
+        
+    
+        
+    
+        
+    
+        
     
         
     
@@ -130,7 +143,20 @@
     
         
     
-</div>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+ </div>
+
 
 
 <p>I spent a couple of months in November and December 2020 practicing jewelry-making techniques with brass and copper. The result is a series of kinetic rings, made to roll and spin between the fingers, some of which are pictured here. I made two abacus inspired rings from brass with guitar string beads and small locknuts and several roller rings using found beads and metal bushings.</p>

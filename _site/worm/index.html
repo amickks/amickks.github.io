@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Soft robotic worm for soil-sensing</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
+    <script src="/assets/function.js"></script>
 </head>
 <body>
 	<script>
@@ -18,10 +19,11 @@
     <a href="javascript:void(0)" id="openbtn" class="mobile-only" onclick="openNav()">&#11057;</a>
 </div>
     <div class="container">
-    <script> 
-    function closeNav() {
+    <script>
+function closeNav() {
+    "use strict";
     document.getElementById("nav-js").style.width = "0";
-    }
+}
 </script>
 
 <div id="nav-js" class="sidebar">
@@ -41,7 +43,16 @@
 
         <div class="content">
          
-    
+    <script>
+function activateImg(imgs) {
+  // Get the expanded image
+  var activatedImg = document.getElementById("activeImg");
+  // Use the same src in the expanded image as the image being clicked on from the grid
+  activatedImg.src = imgs.src;
+  } 
+</script>
+
+
 	<h1>Soft robotic worm for soil-sensing</h1>
 
 <h3><i>July 2022</i></h3>
@@ -55,8 +66,8 @@
 
 
 
-<div class = "project">
-    <img src= "/assets/images/worm/augerhead.jpg" class ="main">
+<div class="project">
+    <img id="activeImg" class="main" src="/assets/images/worm/augerhead.jpg">
     
         
     
@@ -113,27 +124,44 @@
         
     
         
-            <img src="/assets/images/worm/IMG_2253.jpg" alt="image" />
-        
     
         
-            <img src="/assets/images/worm/IMG_2279.jpg" alt="image" />
-        
     
-        
-            <img src="/assets/images/worm/augerhead.jpg" alt="image" />
-        
-    
-        
-            <img src="/assets/images/worm/fieldtest.jpg" alt="image" />
         
     
         
     
-</div>
+        
+    
+        
+    
+        
+    
+        
+            <img src="/assets/images/worm/IMG_2253.jpg" alt="image" onclick="activateImg(this);" >
+        
+    
+        
+            <img src="/assets/images/worm/IMG_2279.jpg" alt="image" onclick="activateImg(this);" >
+        
+    
+        
+            <img src="/assets/images/worm/augerhead.jpg" alt="image" onclick="activateImg(this);" >
+        
+    
+        
+            <img src="/assets/images/worm/fieldtest.jpg" alt="image" onclick="activateImg(this);" >
+        
+    
+        
+    
+        
+    
+ </div>
 
 
-<p>In the summer of 2022 I worked in the Organic Robotics Rab at Cornell University as a part of the NSF-funded CROPPS project. I worked on fabrication and testing of a earthworm-inspired, soil-swimming robot. Developed gait patterns for surface and belowground locomotion using 3D-printed soft pneumatic actuators. implemented sensors and steering.</p>
+
+<p>In the summer of 2022 I worked in the Organic Robotics Rab at Cornell University as a part of the NSF-funded CROPPS project. I worked on fabrication and testing of a earthworm-inspired, soil-swimming robot. I used arduino and mini solenoid valves to develop gait patterns for surface and belowground locomotion using 3D-printed soft pneumatic actuators. I went on to work on the implementation of sensors and steering to allow the device to take measurements of soil and rhizosphere properties.</p>
 
 
         </div>

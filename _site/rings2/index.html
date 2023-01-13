@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Experiments with stone-setting</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
+    <script src="/assets/function.js"></script>
 </head>
 <body>
 	<script>
@@ -18,10 +19,11 @@
     <a href="javascript:void(0)" id="openbtn" class="mobile-only" onclick="openNav()">&#11057;</a>
 </div>
     <div class="container">
-    <script> 
-    function closeNav() {
+    <script>
+function closeNav() {
+    "use strict";
     document.getElementById("nav-js").style.width = "0";
-    }
+}
 </script>
 
 <div id="nav-js" class="sidebar">
@@ -41,7 +43,16 @@
 
         <div class="content">
          
-    
+    <script>
+function activateImg(imgs) {
+  // Get the expanded image
+  var activatedImg = document.getElementById("activeImg");
+  // Use the same src in the expanded image as the image being clicked on from the grid
+  activatedImg.src = imgs.src;
+  } 
+</script>
+
+
 	<h1>Experiments with stone-setting</h1>
 
 <h3><i>December 2021</i></h3>
@@ -53,8 +64,8 @@
 
 
 
-<div class = "project">
-    <img src= "/assets/images/stones/1.jpg" class ="main">
+<div class="project">
+    <img id="activeImg" class="main" src="/assets/images/stones/1.jpg">
     
         
     
@@ -99,12 +110,6 @@
         
     
         
-            <img src="/assets/images/stones/1.jpg" alt="image" />
-        
-    
-        
-            <img src="/assets/images/stones/2.jpg" alt="image" />
-        
     
         
     
@@ -119,12 +124,35 @@
         
     
         
+            <img src="/assets/images/stones/1.jpg" alt="image" onclick="activateImg(this);" >
+        
+    
+        
+            <img src="/assets/images/stones/2.jpg" alt="image" onclick="activateImg(this);" >
+        
+    
+        
     
         
     
         
     
-</div>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+ </div>
+
 
 
 <p>More rings from December 2021. Decided to try working with stones, made two rings, two types of setting.</p>

@@ -34,11 +34,11 @@ p { font-size: 15px; text-transform: none; }
 
 #openbtn { float: right; font-size: 18px; line-height: 1em; }
 
-.gallery { display: grid; gap: 2%; z-index: -1; width: 100%; }
+.gallery { display: grid; gap: 6%; z-index: -1; width: 100%; }
 @media (min-width: 1000px) { .gallery { grid-template-columns: 1fr 1fr 1fr 1fr; } }
 @media (min-width: 600px) and (max-width: 1000px) { .gallery { grid-template-columns: 1fr 1fr 1fr; } }
 @media (max-width: 600px) { .gallery { grid-template-columns: 1fr 1fr; } }
-.gallery .imgbox { display: flex; width: 100%; height: auto; box-sizing: border-box; border-style: solid; border-width: 1px; border-color: lightskyblue; background-position: center center; background-repeat: no-repeat; overflow: hidden; background-size: cover; }
+.gallery .imgbox { display: flex; width: 100%; height: auto; box-sizing: border-box; border-style: solid; border-width: 0px; border-color: lightskyblue; background-position: center center; background-repeat: no-repeat; overflow: hidden; background-size: cover; }
 .gallery .imgbox img { width: 100%; height: auto; margin: 0; }
 .gallery .imgbox:hover { opacity: 80%; }
 
@@ -46,13 +46,13 @@ p { font-size: 15px; text-transform: none; }
 @media (min-width: 1000px) { .gallery2 { width: calc(25%); height: 70vw; } }
 @media (min-width: 600px) and (max-width: 1000px) { .gallery2 { width: calc(33% + 2px); height: 100vw; } }
 @media (max-width: 600px) { .gallery2 { width: calc(50% + 4px); height: 280vw; } }
-.gallery2 .imgbox { box-sizing: border-box; border-style: solid; border-width: 1px; border-color: lightskyblue; margin-bottom: 8px; margin-right: 8px; flex: 1 1 10px; }
+.gallery2 .imgbox { box-sizing: border-box; border-style: solid; border-width: 0px; border-color: lightskyblue; margin-bottom: 8px; margin-right: 8px; flex: 1 1 10px; }
 .gallery2 .imgbox img { width: 100%; height: auto; margin: 0; }
 
 .page img { width: 70%; border-style: solid; border-width: 1px; border-color: lightskyblue; box-sizing: border-box; margin-bottom: 10px; }
 
 .project { display: grid; gap: 20px; }
-.project img { width: 100%; border-style: solid; border-width: 1px; border-color: lightskyblue; box-sizing: border-box; }
+.project img { width: 100%; border-style: solid; border-width: 1px; border-color: lightskyblue; box-sizing: border-box; cursor: pointer; }
 .project .main { grid-row-end: span 4; }
 @media (min-width: 1000px) { .project { grid-template-columns: auto 150px; } }
 @media (min-width: 600px) and (max-width: 1000px) { .project { grid-template-columns: auto 100px; } }

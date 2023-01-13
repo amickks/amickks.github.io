@@ -178,9 +178,9 @@ body {
     line-height: 1em;
   }
 
-.gallery {
+.gallery1 {
     display: grid;
-    gap:2%;  
+    gap:6%;  
     z-index: -1;
     width: 100%;
     
@@ -205,7 +205,7 @@ body {
 //        padding-bottom: 100%;
         box-sizing: border-box;
         border-style:solid;
-        border-width:1px;
+        border-width:0px;
         border-color: $border;
         background-position: center center;
         background-repeat: no-repeat;
@@ -216,13 +216,13 @@ body {
         }
     }  
 }
-.gallery2 { 
+.gallery { 
     z-index: -1;
     font-size:0;  
     display:flex;
     flex-flow: column wrap;
     
-            @media (min-width: 1000px) {
+        @media (min-width: 1000px) {
             width: calc(25%);
             height:70vw;
         }
@@ -271,11 +271,11 @@ body {
         border-width:1px;
         border-color: $border;
         box-sizing: border-box;
+        cursor: pointer; 
     }
     .main {
-        grid-row-end: span 4;
+        grid-row-end: span 4;   
     }
-    
     @media (min-width: 1000px) {
         grid-template-columns: auto 150px;
     }

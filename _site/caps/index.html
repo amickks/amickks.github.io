@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>capacitor chain</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
+    <script src="/assets/function.js"></script>
 </head>
 <body>
 	<script>
@@ -18,10 +19,11 @@
     <a href="javascript:void(0)" id="openbtn" class="mobile-only" onclick="openNav()">&#11057;</a>
 </div>
     <div class="container">
-    <script> 
-    function closeNav() {
+    <script>
+function closeNav() {
+    "use strict";
     document.getElementById("nav-js").style.width = "0";
-    }
+}
 </script>
 
 <div id="nav-js" class="sidebar">
@@ -41,7 +43,16 @@
 
         <div class="content">
          
-    
+    <script>
+function activateImg(imgs) {
+  // Get the expanded image
+  var activatedImg = document.getElementById("activeImg");
+  // Use the same src in the expanded image as the image being clicked on from the grid
+  activatedImg.src = imgs.src;
+  } 
+</script>
+
+
 	<h1>capacitor chain</h1>
 
 <h3><i>October 2020</i></h3>
@@ -53,8 +64,8 @@
 
 
 
-<div class = "project">
-    <img src= "/assets/images/capacitor-necklace/necklace.jpg" class ="main">
+<div class="project">
+    <img id="activeImg" class="main" src="/assets/images/capacitor-necklace/necklace.jpg">
     
         
     
@@ -77,19 +88,15 @@
         
     
         
-            <img src="/assets/images/capacitor-necklace/IMG_1102.JPG" alt="image" />
+            <img src="/assets/images/capacitor-necklace/IMG_1102.JPG" alt="image" onclick="activateImg(this);" >
         
     
         
-            <img src="/assets/images/capacitor-necklace/IMG_1110.JPG" alt="image" />
+            <img src="/assets/images/capacitor-necklace/IMG_1110.JPG" alt="image" onclick="activateImg(this);" >
         
     
         
-            <img src="/assets/images/capacitor-necklace/necklace.jpg" alt="image" />
-        
-    
-        
-    
+            <img src="/assets/images/capacitor-necklace/necklace.jpg" alt="image" onclick="activateImg(this);" >
         
     
         
@@ -126,7 +133,28 @@
     
         
     
-</div>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+ </div>
+
 
 
 
