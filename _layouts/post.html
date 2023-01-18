@@ -10,22 +10,22 @@ function activateImg(imgs) {
   } 
 </script>
 
-{% if page.title%}
+{% if page.title %}
 	<h1>{{page.title}}</h1>
 {% else %}
 	<h1>Untitled</h1>
 {% endif %}
 <h3><i>{{ page.date | date: "%B %Y" }}</i></h3>
 
-{% if page.location%}
+{% if page.location %}
     <h3>{{page.location}}<h3>
 {% endif %}
         
-{% if page.medium%}
+{% if page.medium %}
     <h3>{{page.medium}}<h3>
 {% endif %}
 
-{% if page.image%}
+{% if page.image %}
 <div class="project">
     <img id="activeImg" class="main" src="{{page.image}}">
     {% for image in site.static_files %}
