@@ -1,6 +1,7 @@
-body { font-family: monospace; background-color: white; padding: 0px; margin: 0px; }
+body { font-family: monospace; background-color: white; padding: 0px; margin: 0px; color: black; }
+body a { color: black; }
 
-h1 { text-transform: uppercase; font-size: 18px; }
+h1 { text-transform: uppercase; font-size: 19px; }
 
 h2 { font-weight: normal; font-size: 18px; }
 
@@ -11,23 +12,22 @@ p { font-size: 15px; text-transform: none; text-align: justify; }
 @media (min-width: 600px) { .mobile-only { display: none; } }
 @media (max-width: 600px) { .large-only { display: none; } }
 .navbar { top: 0; overflow: hidden; background-color: white; }
-.navbar a { text-transform: lowercase; color: black; text-decoration: none; padding: 20px; }
+.navbar a { text-transform: uppercase; color: black; text-decoration: none; padding: 20px; }
 
-#title a { float: left; font-style: normal; text-transform: uppercase; font-size: 18px; text-decoration: none; color: black; }
+#title a { float: left; font-style: normal; font-weight: 600; text-transform: uppercase; font-size: 18px; text-decoration: none; color: black; }
 @media (max-width: 600px) { #title a { font-size: 18px; } }
-#title a:hover { font-style: normal; text-decoration: underline; text-decoration-style: wavy; text-decoration-color: orangered; text-underline-position: below; text-decoration-thickness: 1.5px; }
 @media (min-width: 600px) { #title a { padding-bottom: 60px; } }
 
 .container { width: 100vw; }
 
-.sidebar { height: 100%; font-size: 15px; float: left; }
-.sidebar .menu a { line-height: 1.75; font-size: inherit; text-decoration: none; }
+.sidebar { height: 250px; font-size: 15px; float: left; box-sizing: border-box; }
+.sidebar .menu a { line-height: 1.75; font-size: inherit; text-decoration: none; text-transform: uppercase; }
 .sidebar .menu a:hover { font-style: italic; text-decoration: none; }
 
-@media (min-width: 600px) { .sidebar { position: absolute; width: 200px; padding: 20px; }
+@media (min-width: 600px) { .sidebar { position: absolute; width: 200px; padding: 20px; margin-left: 10px; margin-top: 10px; border-style: solid; border-width: 1px; border-color: black; border-radius: 3px; }
   .sidebar a { color: black; }
   .content { position: absolute; left: 240px; margin: inherit; margin: 10px; width: calc(95% - 260px); } }
-@media (max-width: 600px) { .sidebar { position: fixed; width: 0%; height: 100%; z-index: 1; top: 0; right: -40px; margin-left: 60px; padding-left: 40px; transition: 0.2s; overflow: auto; background-color: orangered; }
+@media (max-width: 600px) { .sidebar { position: fixed; width: 0%; height: 100%; z-index: 1; top: 0; right: -40px; margin-left: 60px; padding-left: 40px; transition: 0.2s; overflow: auto; border-left-style: solid; border-left-width: 1px; border-left-color: black; background-color: orangered; }
   .sidebar a { color: white; }
   .content { width: calc(100% - 40px); margin: 0 20px; } }
 .sidebar #closebtn { font-size: 30px; line-height: 2em; padding-bottom: 20px; text-decoration: none; color: white; font-weight: normal; }
@@ -38,7 +38,7 @@ p { font-size: 15px; text-transform: none; text-align: justify; }
 @media (min-width: 1000px) { .gallery1 { grid-template-columns: 1fr 1fr 1fr 1fr; } }
 @media (min-width: 600px) and (max-width: 1000px) { .gallery1 { grid-template-columns: 1fr 1fr 1fr; } }
 @media (max-width: 600px) { .gallery1 { grid-template-columns: 1fr 1fr; } }
-.gallery1 .imgbox { display: flex; width: 100%; height: auto; box-sizing: border-box; border-style: solid; border-width: 0px; border-color: lightskyblue; background-position: center center; background-repeat: no-repeat; overflow: hidden; background-size: cover; }
+.gallery1 .imgbox { display: flex; width: 100%; height: auto; box-sizing: border-box; border-style: solid; border-width: 1px; border-color: black; border-radius: 3px; background-position: center center; background-repeat: no-repeat; overflow: hidden; background-size: cover; }
 .gallery1 .imgbox img { width: 100%; height: auto; margin: 0; }
 .gallery1 .imgbox:hover { opacity: 80%; }
 
@@ -46,23 +46,24 @@ p { font-size: 15px; text-transform: none; text-align: justify; }
 @media (min-width: 1000px) { .gallery { width: calc(25%); height: 62vw; } }
 @media (min-width: 600px) and (max-width: 1000px) { .gallery { width: calc(33% + 2px); height: 100vw; } }
 @media (max-width: 600px) { .gallery { width: calc(50% + 4px); height: 280vw; } }
-.gallery .imgbox { box-sizing: border-box; border-style: solid; border-width: 1px; border-color: lightskyblue; margin-bottom: 8px; margin-right: 8px; flex: 1 1 10px; }
+.gallery .imgbox { box-sizing: border-box; border-style: solid; border-width: 1px; border-color: black; border-radius: 3px; margin-bottom: 8px; margin-right: 8px; flex: 1 1 10px; }
 .gallery .imgbox img { width: 100%; height: auto; margin: 0; }
 
-.page img { width: 70%; border-style: solid; border-width: 1px; border-color: lightskyblue; box-sizing: border-box; margin-bottom: 10px; }
+.page img { width: 70%; border-style: solid; border-width: 1px; border-color: black; box-sizing: border-box; border-radius: 3px; margin-bottom: 10px; }
 
-.project { display: grid; gap: 20px; }
-.project img { width: 100%; border-style: solid; border-width: 1px; border-color: lightskyblue; box-sizing: border-box; cursor: pointer; }
-.project .main { grid-row-end: span 4; }
-@media (min-width: 1000px) { .project { grid-template-columns: auto 150px; } }
-@media (min-width: 600px) and (max-width: 1000px) { .project { grid-template-columns: auto 100px; } }
-@media (max-width: 600px) { .project { grid-template-columns: auto auto auto auto; }
-  .project .main { grid-column-start: 1; grid-column-end: 5; } }
+.project { display: grid; gap: 20px; width: 90%; }
+.project img { object-fit: contain; max-width: 100%; border-style: solid; border-width: 1px; border-color: black; box-sizing: border-box; cursor: pointer; border-radius: 3px; }
+.project .main { grid-row-end: span 4; border-style: none; aspect-ratio: 4 / 3; }
+@media (min-width: 1200px) { .project { grid-template-columns: auto 150px; } }
+@media (min-width: 800px) and (max-width: 1200px) { .project { grid-template-columns: auto 100px; } }
+@media (max-width: 800px) { .project { grid-template-columns: auto auto auto auto; }
+  .project .main { grid-column-start: 1; grid-column-end: 5; max-height: none; }
+  .project img { max-height: 100px; } }
 
-.pagelist .card { width: 100%; min-height: 152px; height: auto; border-style: solid; border-width: 1px; border-color: lightskyblue; box-sizing: border-box; margin-top: 10px; display: block; }
-.pagelist .card img { height: 150px; width: auto; border-style: solid; border-width: 1px; border-color: lightskyblue; box-sizing: border-box; }
+.pagelist .card { width: 100%; min-height: 152px; height: auto; border-style: solid; border-width: 1px; border-color: black; box-sizing: border-box; border-radius: 3px; margin-top: 10px; display: block; }
+.pagelist .card img { height: 150px; width: auto; box-sizing: border-box; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: black; }
 .pagelist .card .desc { box-sizing: border-box; display: block; margin: 10px; }
 
-.pagelist .card:nth-child(odd) img { float: left; clear: left; margin-right: 10px; }
+.pagelist .card:nth-child(odd) img { float: left; clear: left; margin-right: 10px; border-right-style: solid; border-right-width: 1px; border-right-color: black; }
 
-.pagelist .card:nth-child(even) img { float: right; clear: right; }
+.pagelist .card:nth-child(even) img { float: right; clear: right; border-left-style: solid; border-left-width: 1px; border-left-color: black; }

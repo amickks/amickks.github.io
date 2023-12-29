@@ -4,21 +4,25 @@ $bg-color: white;
 $accent: orangered;
 $icon-size: 18px;
 $navbar-height:60px;
-$border: lightskyblue;
+$border: black;
+$borderrad: 3px;
+$borderwid: 1px;
 
 body {
     font-family:monospace;
-//    text-transform: lowercase;
-//    letter-spacing: 1px;
     background-color: $bg-color;
     padding:0px;
     margin: 0px;
+    color:$text-color;
+    a {
+        color:$text-color;
+    }
 
     
 }
     h1 {
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 19px;
     }
     h2 {
 //    text-transform: uppercase;
@@ -53,7 +57,7 @@ body {
     overflow:hidden;
     background-color: $bg-color;
     a {
-        text-transform: lowercase;
+        text-transform: uppercase;
         color:$text-color;
         text-decoration: none; 
         padding:20px;
@@ -63,6 +67,7 @@ body {
 #title a{
     float:left;
     font-style: normal;
+    font-weight: 600;
     text-transform: uppercase;
     font-size:18px;
     text-decoration: none;
@@ -76,12 +81,12 @@ body {
         font-size: $icon-size;
     }
     &:hover {
-        font-style: normal;
-        text-decoration: underline;
-        text-decoration-style: wavy;
-        text-decoration-color: $accent;
-        text-underline-position:below;
-        text-decoration-thickness: 1.5px;
+//        font-style: normal;
+//        text-decoration: underline;
+//        text-decoration-style: wavy;
+//        text-decoration-color: $accent;
+//        text-underline-position:below;
+//        text-decoration-thickness: 1.5px;
 //        color:$text-color;
         
 //        @media (max-width: 600px) {
@@ -98,16 +103,17 @@ body {
 }
 
 .sidebar {
-    height:100%;
+    height:250px;
     font-size: 15px;
     float:left;
-    
-    
+    box-sizing: border-box;
+
     .menu {  
         a{
         line-height: 1.75;
         font-size: inherit;
         text-decoration: none;
+        text-transform: uppercase;
         
         &:hover {
             font-style: italic;
@@ -131,6 +137,12 @@ body {
         position:absolute;
         width:200px;
         padding: 20px;
+        margin-left:10px;
+        margin-top:10px;
+        border-style:solid;
+        border-width:$borderwid;
+        border-color: $border;
+        border-radius: $borderrad;
     }
     .content {
         position:absolute;
@@ -153,6 +165,11 @@ body {
         padding-left: 40px;
         transition: 0.2s;
         overflow:auto;
+        
+        border-left-style:solid;
+        border-left-width:$borderwid;
+        border-left-color: $border;
+        
         background-color:$accent;
          a{
              color:white;
@@ -205,8 +222,9 @@ body {
 //        padding-bottom: 100%;
         box-sizing: border-box;
         border-style:solid;
-        border-width:0px;
+        border-width:$borderwid;
         border-color: $border;
+        border-radius: $borderrad;
         background-position: center center;
         background-repeat: no-repeat;
         overflow: hidden;
@@ -242,8 +260,9 @@ body {
         }
         box-sizing: border-box;
         border-style:solid;
-        border-width:1px;
+        border-width:$borderwid;
         border-color: $border;
+        border-radius: $borderrad;
         margin-bottom: 8px;
         margin-right: 8px;
         flex:1 1 10px;
@@ -254,41 +273,54 @@ body {
     img {
         width:70%;
         border-style:solid;
-        border-width:1px;
+        border-width:$borderwid;
         border-color: $border;
         box-sizing: border-box;
+        border-radius: $borderrad;
         margin-bottom:10px;
     }
 }
 
 .project {
     display: grid;
-    gap:20px;
-    
+    gap: 20px;
+    width:90%;
+    // Removed fixed height
+
     img {
-        height: 100%;
-        border-style:solid;
-        border-width:1px;
+        object-fit: contain;
+        max-width: 100%;
+        border-style: solid;
+        border-width: $borderwid;
         border-color: $border;
         box-sizing: border-box;
         cursor: pointer; 
-    }
-    .main {
-        grid-row-end: span 4;   
+        border-radius: $borderrad;
     }
 
-    @media (min-width: 1000px) {
+    .main {
+        grid-row-end: span 4; 
+        border-style: none;
+        // Use aspect-ratio
+        aspect-ratio: 4 / 3; // Change this ratio as needed
+    }
+
+    @media (min-width: 1200px) {
         grid-template-columns: auto 150px;
     }
-    @media (min-width: 600px) and (max-width: 1000px){
+    @media (min-width: 800px) and (max-width: 1200px){
         grid-template-columns: auto 100px;
     }
-    @media (max-width: 600px) {
+    @media (max-width: 800px) {
         grid-template-columns: auto auto auto auto;
         .main {
             grid-column-start: 1;
             grid-column-end: 5;
-         }
+            max-height: none;
+        }
+        img {
+            max-height: 100px;
+        }
     }
 }
 
@@ -299,19 +331,20 @@ body {
         min-height: 152px;
         height: auto;
         border-style:solid;
-        border-width:1px;
+        border-width:$borderwid;
         border-color: $border;
         box-sizing: border-box;
+        border-radius: $borderrad;
         margin-top: 10px;
         display:block;
         
         img {
             height:150px;
             width:auto;
-            border-style:solid;
-            border-width:1px;
-            border-color: $border;
             box-sizing: border-box;
+            border-bottom-style:solid;
+            border-bottom-width: $borderwid;
+            border-bottom-color: $border;
         }
         .desc {    
             box-sizing: border-box;
@@ -324,9 +357,16 @@ body {
     float:left;
     clear:left; 
     margin-right: 10px;
+    border-right-style:solid;
+    border-right-width: $borderwid;
+    border-right-color: $border;
 }
 .pagelist .card:nth-child(even) img {    
     float:right;
     clear:right;  
+    border-left-style:solid;
+    border-left-width: $borderwid;
+    border-left-color: $border;
+
 }
 
