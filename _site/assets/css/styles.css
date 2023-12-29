@@ -46,7 +46,7 @@ p { font-size: 15px; text-transform: none; text-align: justify; }
 @media (min-width: 1000px) { .gallery { width: calc(25%); height: 62vw; } }
 @media (min-width: 600px) and (max-width: 1000px) { .gallery { width: calc(33% + 2px); height: 100vw; } }
 @media (max-width: 600px) { .gallery { width: calc(50% + 4px); height: 280vw; } }
-.gallery .imgbox { box-sizing: border-box; border-right-style: double; border-right-width: 3px; border-bottom-style: double; border-bottom-width: 3px; border-color: white; margin-bottom: 12px; margin-right: 12px; flex: 1 1 10px; }
+.gallery .imgbox { box-sizing: border-box; border-right-style: double; border-right-width: 3px; border-bottom-style: double; border-bottom-width: 3px; border-color: white; border-radius: 3px; margin-bottom: 12px; margin-right: 12px; flex: 1 1 10px; }
 .gallery .imgbox img { width: 100%; height: auto; margin: 0; }
 
 .page img { width: 70%; border-style: solid; border-width: 1px; border-color: white; box-sizing: border-box; border-radius: 3px; margin-bottom: 10px; }
