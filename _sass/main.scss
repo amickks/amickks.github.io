@@ -309,8 +309,9 @@ body {
     }
 
     .main {
-        grid-row-end: span 4; 
+        grid-row-end: span 5; 
         border-style: none;
+        height:500px;
         // Use aspect-ratio
         aspect-ratio: 4 / 3; // Change this ratio as needed
     }
