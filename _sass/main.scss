@@ -185,7 +185,7 @@ body {
     }
     
     .content {
-        width: calc(100% - 40px); 
+        width: calc(100% -40px); 
         margin: 0 20px;
     }
 }
@@ -244,21 +244,18 @@ body {
 }
 .gallery { 
     z-index: -1;
-    font-size:0;  
-    display:flex;
-    flex-flow: column wrap;
-    
+    font-size:0;    
+    column-gap: 12px; /* must match the bottom margin of imgbox */
+    width:100%;
+
         @media (min-width: 1000px) {
-            width: calc(25%);
-            height:62vw;
+            column-count: 4; 
         }
         @media (min-width: 600px) and (max-width: 1000px){
-            width: calc(33% + 2px);
-            height:100vw;
+            column-count: 3;
         }
         @media (max-width: 600px) {
-            width: calc(50% + 4px);
-            height:280vw;
+            column-count: 2;
         }
     .imgbox {
         img {
@@ -274,8 +271,6 @@ body {
         border-color: $border;
         border-radius:$borderrad;
         margin-bottom: 12px;
-        margin-right: 12px;
-        flex:1 1 10px;
     }
 }
 .page {
@@ -294,8 +289,6 @@ body {
 .project {
     display: grid;
     gap: 20px;
-    width:90%;
-    // Removed fixed height
 
     img {
         object-fit: contain;
@@ -311,22 +304,24 @@ body {
     .main {
         grid-row-end: span 5; 
         border-style: none;
-        height:500px;
-        // Use aspect-ratio
         aspect-ratio: 4 / 3; // Change this ratio as needed
+//        max-height:80vh;
     }
 
-    @media (min-width: 1200px) {
-        grid-template-columns: auto 150px;
+    @media (min-width: 600px) {
+        grid-template-columns: auto 10vw;
+        width:90%;
+        .main{
+            height:40vw;
+        }
     }
-    @media (min-width: 800px) and (max-width: 1200px){
-        grid-template-columns: auto 100px;
-    }
-    @media (max-width: 800px) {
+    @media (max-width: 600px) {
         grid-template-columns: auto auto auto auto;
+        width:100%;
         .main {
             grid-column-start: 1;
             grid-column-end: 5;
+            height:70vw;
             max-height: none;
         }
         img {

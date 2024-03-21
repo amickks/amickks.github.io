@@ -10,7 +10,7 @@ layout: default
         <div class ="card">
             <a href="{{ post.url }}"><img src = "{{post.image}}"></a>
             <div class = "desc">
-                <span>{{ post.date | date_to_string }}</span> <br><h3> <b><a href="{{ post.url }}">{{ post.title }}</a></b></h3> <br> <i>{{post.location}}</i> <br> {{post.medium}} <br><br> {{post.shortdesc}}
+                <span>{{ post.date | date: "%Y" }}</span> <br><h3> <b><a href="{{ post.url }}">{{ post.title }}</a></b></h3> <br> <i>{{post.location}}</i> <br> {{post.medium}} <br><br> {{post.shortdesc}}
             </div>
         </div>
 
