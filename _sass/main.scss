@@ -249,13 +249,13 @@ body {
     width:100%;
 
         @media (min-width: 1000px) {
-            column-count: 4; 
+            column-count: 3; 
         }
         @media (min-width: 600px) and (max-width: 1000px){
-            column-count: 3;
+            column-count: 2;
         }
         @media (max-width: 600px) {
-            column-count: 2;
+            column-count: 1;
         }
     .imgbox {
         img {

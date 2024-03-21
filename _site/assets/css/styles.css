@@ -43,9 +43,9 @@ p { font-size: 15px; text-transform: none; text-align: justify; }
 .gallery1 .imgbox:hover { opacity: 80%; }
 
 .gallery { z-index: -1; font-size: 0; column-gap: 12px; /* must match the bottom margin of imgbox */ width: 100%; }
-@media (min-width: 1000px) { .gallery { column-count: 4; } }
-@media (min-width: 600px) and (max-width: 1000px) { .gallery { column-count: 3; } }
-@media (max-width: 600px) { .gallery { column-count: 2; } }
+@media (min-width: 1000px) { .gallery { column-count: 3; } }
+@media (min-width: 600px) and (max-width: 1000px) { .gallery { column-count: 2; } }
+@media (max-width: 600px) { .gallery { column-count: 1; } }
 .gallery .imgbox { box-sizing: border-box; border-right-style: double; border-right-width: 3px; border-bottom-style: double; border-bottom-width: 3px; border-color: white; border-radius: 3px; margin-bottom: 12px; }
 .gallery .imgbox img { width: 100%; height: auto; margin: 0; }
 
