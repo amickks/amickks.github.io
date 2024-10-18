@@ -6,20 +6,24 @@ permalink: /resume/
 
 # Education
 ### **Brown University** / Mechanical Engineering, Sc.B.
-### SEPTEMBER  2019 - DECEMBER 2023,  PROVIDENCE, RI
+### SEPTEMBER  2019 - MAY 2024,  PROVIDENCE, RI
 
 # Work
+### **Breuer Lab, Brown University** / Technical Assistant
+### JUNE  2024 - AUGUST 2024,  PROVIDENCE, RI
+Assisted with the design and fabrication of a "backward-facing step" for fluid mechanics testing flume. 
+
 ### **Brown Design Workshop** / Manager
-### JANUARY  2022 - PRESENT,  PROVIDENCE, RI
-Teach workshops in woodworking, 3D-printing, laser cutting, sheet metal tools, and soldering to students and community members. Participate in monitor hiring, training, and space organization decisions. Develop workshop curricula for new tools. Maintain a safe, clean, and organized workspace for all to use. Hold weekly open mending hours to help members to repair their things
+### JANUARY  2022 - MAY 2024,  PROVIDENCE, RI
+Taught workshops in woodworking, 3D-printing, laser cutting, sheet metal tools, and soldering to students and community members. Participated in monitor hiring, training, and space organization decisions. Developed workshop curricula for new tools. Maintained a safe, clean, and organized workspace for all to use. Held weekly open mending hours to help members to repair their things
 
 ### **Organic Robotics Lab**, Cornell University / CROPPS REU intern
 ### MAY  2022 - AUGUST 2022,  ITHACA, NY
 Worked on fabrication and testing of an earthworm-inspired, [soil-swimming robot](/worm/) as a part of the NSF-funded Center for Research on Programmable Plant Systems (CROPPS). Worked with 3D-printed soft pneumatic actuators to develop gait patterns for soil locomotion. Used Arduino and integrated sensors for novel agricultural research soil sensing. 
 
 ### **Breuer Lab, Brown University** / “Robo-Bat” Project
-### JUNE  2021 - PRESENT,  PROVIDENCE, RI
-Working with a grad student to design and test [flapping wing robots](/flapper/). Test and prototype parts and assemblies using 3D printed resin and laser cut acrylic. Take data in a research environment using force transducers and data acquisition hardware in a wind tunnel. Summer research appeared on a poster presented at the 2021 APS DFD conference. 
+### JUNE  2021 - MAY 2023,  PROVIDENCE, RI
+Worked with a grad student to design and test [flapping wing robots](/flapper/). Tested and prototyped parts and assemblies using 3D printed resin and laser cut acrylic. Took data in a research environment using force transducers and data acquisition hardware in a wind tunnel. Summer research appeared on a poster presented at the 2021 APS DFD conference. 
 
 ### **Brown University School of Engineering** / Design Project TA, Dynamics and Vibrations
 ### JUNE  2021 - AUGUST 2021,  PROVIDENCE, RI
@@ -27,7 +31,7 @@ Updated and developed hands-on design projects for an introductory engineering c
 
 ### **Greenview Farm** / Field Crew
 ### JUNE  2020 - OCTOBER 2020,  SOUTH KINGSTOWN, RI
-Planting and harvesting organic vegetables to be distributed in the farm CSA or sold to local restaurants. Also responsible for washing and packing lettuce and greens mixes.
+Worked in crew of 8, planting and harvesting organic vegetables to be distributed in the farm CSA and sold to local restaurants. Washed and packed lettuce and greens mixes.
 
 # Skills
 ### **Technical:**
