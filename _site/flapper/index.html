@@ -15,8 +15,8 @@
 </script>
 
 <div class = "navbar mobile-only">
-    <div id="title"><a href="/" >Amick Sollenberger</a></div>
-    <a href="javascript:void(0)" id="openbtn" class="mobile-only" onclick="openNav()">☰</a>
+    <div class="title"><a href="/" >Amick Sollenberger</a></div>
+    <a href="javascript:void(0)" id="openbtn" class="mobile-only" onclick="openNav()">></a>
 </div>
     <div class="container">
     <script>
@@ -27,15 +27,15 @@ function closeNav() {
 </script>
 
 <div id="nav-js" class="sidebar">
-    <div id="title" class="large-only"><a href="/">Amick Sollenberger</a></div>
-    <a href="javascript:void(0)" id="closebtn" class="mobile-only" onclick="closeNav()">⏎</a>
+    <div class="title" ><div class="large-only"><a href="/">Amick Sollenberger</a></div></div>
+    <a href="javascript:void(0)" id="closebtn" class="mobile-only" onclick="closeNav()"><</a>
     <br>
     <nav>
         <div class="menu">
         <a href="/about/" >about</a> <br>
         <a href="/engineering/">engineering</a> <br>
         <a href="/work/">misc.</a> <br>
-        <a href="/resume/">resume</a> <br>
+        <a href="mailto:amick.sollenberger@gmail.com">email</a> <br>
         </div>
     </nav>
 </div>
@@ -55,19 +55,18 @@ function activateImg(imgs) {
 
 	<h1>Bat-inspired flapping-wing robot</h1>
 
-<h3><i>July 2021</i></h3>
-
-
-    <h3>Breuer Lab, Brown University<h3>
-
         
 
-    <h3>3D-printed resin parts, metal hardware, pink foam, stepper motors<h3>
+    <h3><i>3D-printed resin parts, metal hardware, pink foam, stepper motors</i><h3>
+
+        
+<h3>July 2021, Breuer Lab, Brown University<h3>
+
 
 
 
 <div class="project">
-    <img id="activeImg" class="main" src="/assets/images/roBat/robat.jpg">
+    <img id="activeImg" class="main" src="/assets/images/roBat/robat_intunnel.jpg">
     
         
     
@@ -108,25 +107,15 @@ function activateImg(imgs) {
         
     
         
-    
+            <img src="/assets/images/roBat/alignment.jpg" alt="image" onclick="activateImg(this);" >
         
     
         
-    
-        
-            <img src="/assets/images/roBat/IMG_1003.jpg" alt="image" onclick="activateImg(this);" >
+            <img src="/assets/images/roBat/robat_intunnel.jpg" alt="image" onclick="activateImg(this);" >
         
     
         
-            <img src="/assets/images/roBat/IMG_1014.jpg" alt="image" onclick="activateImg(this);" >
-        
-    
-        
-            <img src="/assets/images/roBat/robat.jpg" alt="image" onclick="activateImg(this);" >
-        
-    
-        
-    
+            <img src="/assets/images/roBat/sharkface.jpg" alt="image" onclick="activateImg(this);" >
         
     
         
@@ -165,15 +154,16 @@ function activateImg(imgs) {
 
 
 
-<p>I began working in Breuer lab in the Summer of 2021. As a part of a research award, I worked with another undergraduate to help assemble and troubleshoot the design of a flapping-wing bad-inspired robot.</p>
+<p>Bat-inspired robot I helped to design, build, and test in Breuer Lab over the course of three years. 
+<!--I began working in Breuer lab in the Summer of 2021. As a part of a research award, I worked with another undergraduate to help assemble and troubleshoot the design of a flapping-wing bat-inspired robot. --></p>
 
-<p>The summer began with working on an older robot which relied on a cam mechanism to reproduce the wing motions of a bat in flight.</p>
+<!--The summer began with working on an older robot which relied on a cam mechanism to reproduce the wing motions of a bat in flight.-->
 
-<p>This involved rewiring many of the cams and adjusting the tension to produce the correct range of motion. Then, I designed a forearm and “hand” so that the robot could be used as a demonstration model. I designed the wing using Fusion 360 and fabricated using 3d-printed resin and laser cut acrylic.</p>
+<!--This involved rewiring many of the cams and adjusting the tension to produce the correct range of motion. Then, I designed a forearm and "hand" so that the robot could be used as a demonstration model. I designed the wing using Fusion 360 and fabricated using 3d-printed resin and laser cut acrylic.-->
 
-<p>The assembly of the new robot began with more fabrication work– sanding and filing of 3d printed parts, lasercutting acrylic and balsa wood for the wings, developing a method for glueing the kite cloth and struts to the wings, etc.</p>
+<!--The assembly of the new robot began with more fabrication work-- sanding and filing of 3d printed parts, lasercutting acrylic and balsa wood for the wings, developing a method for glueing the kite cloth and struts to the wings, etc.-->
 
-<p>Once assembled, my coworker and I learned to use the Galil motor controller and force transducer DAQ, assembling these into a MATLAB script which we used to measure forces on the wings while flapping on the bench. Eventually, we moved this arrangement to the wind tunnel, where we were able to determine the lift and drag at different wind speeds, flapping frequencies and angles of attack.</p>
+<!--Once assembled, my coworker and I learned to use the Galil motor controller and force transducer DAQ, assembling these into a MATLAB script which we used to measure forces on the wings while flapping on the bench. Eventually, we moved this arrangement to the wind tunnel, where we were able to determine the lift and drag at different wind speeds, flapping frequencies and angles of attack. -->
 
 
         </div>

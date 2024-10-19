@@ -1,45 +1,49 @@
 // main.scss
-$text-color: white;
-$bg-color: black;
+$text-color: black;
+$bg-color: white;
 $box : $bg-color;
 $border: $text-color;
-$nav-bg: black;
+$nav-bg: $bg-color;
 $accent: orangered;
 $icon-size: 18px;
 $navbar-height:60px;
-$borderrad: 3px;
+$borderrad: 0px;
 $borderwid: 1px;
+$textstyle: lowercase;
+$font: sans-serif;
 
 body {
-    font-family:monospace;
+    font-family: $font;
+    font-size: 14px;
     background-color: $bg-color;
     padding:0px;
     margin: 0px;
     color:$text-color;
     a {
-        color:$text-color;
+//        color:$text-color;
     }
 
     
 }
     h1 {
-    text-transform: uppercase;
-    font-size: 19px;
+    font-size: 14px;
+//    text-transform: $textstyle;
     }
     h2 {
-//    text-transform: uppercase;
+    font-size: 14px;
+    text-transform: $textstyle;
     font-weight: normal;
-    font-size: 18px;
     }
     h3 {
-    text-transform: uppercase;
+    font-size: 14px;
+//    text-transform: $textstyle;
     font-weight: normal;
-    font-size: inherit;
     }
     p {
-    font-size: 15px;
+    font-size: 14px;
+    line-height: 1.25;
     text-transform: none;
-    text-align:justify
+//    text-align:justify;
     }
 
 @media (min-width: 600px) {
@@ -59,43 +63,41 @@ body {
     overflow:hidden;
     background-color: $bg-color;
     a {
-        text-transform: uppercase;
+        font-size:16px;
         color:$text-color;
-        text-decoration: none; 
         padding:20px;
     }
   }
 
-#title a{
+.title a{
     float:left;
     font-style: normal;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size:18px;
-    text-decoration: none;
-//    text-decoration-style: wavy;
-//    text-decoration-color: $accent;
-//    text-underline-position:below;
-//    text-decoration-thickness: 1.5px;
+    color:$text-color;
+    font-size:16px;
+//    font-weight: 600;
+//    text-transform: $textstyle;
+//    text-decoration: none;
+    
+//    border-style:solid; 
+//    border-width:$borderwid;
+//    border-color: $border;
+//    border-radius: $borderrad;
+    text-decoration-style: wavy;
+    text-decoration-color: $accent;
+    text-underline-position:below;
+    text-decoration-thickness: 1px;
     
     @media (max-width: 600px) {
-        font-size: $icon-size;
+//        font-size: 16px;
     }
     &:hover {
-//        font-style: normal;
-//        text-decoration: underline;
-//        text-decoration-style: wavy;
-//        text-decoration-color: $accent;
-//        text-underline-position:below;
-//        text-decoration-thickness: 1.5px;
-//        color:$text-color;
         
 //        @media (max-width: 600px) {
 //            text-decoration: none;
 //        }
     }
     @media (min-width: 600px) {
-        padding-bottom: 60px;
+        margin-bottom: 60px;
     }
 }
 
@@ -105,22 +107,19 @@ body {
 }
 
 .sidebar {
-    font-size: 15px;
+    padding:10px;
     float:left;
     box-sizing: border-box;
+    font-size: 16px;
     .menu {  
         a{
         line-height: 1.75;
-        font-size: inherit;
         text-decoration: none;
-        text-transform: uppercase;
+        text-transform: $textstyle;
         
         &:hover {
             font-style: italic;
             text-decoration:none;
-//            text-decoration-style:wavy;
-//            text-decoration-thickness: 1px; 
-//            text-decoration-color: $accent;
         }
     }
     }
@@ -137,19 +136,16 @@ body {
 @media (min-width: 600px) {
     .sidebar {
         a{
-            color:$text-color;
+//            color:$text-color;
         }
         position:absolute;
-        width:200px;
+        width:205px;
         padding: 20px;
         margin-left:10px;
         margin-top:10px;
         
         height:250px;
-        border-style:solid;
-        border-width:$borderwid;
-        border-color: $border;
-        border-radius: $borderrad;
+
         background-color:$nav-bg;
     }
     .content {
@@ -157,7 +153,7 @@ body {
         left: 240px;
         margin-top:10px;
         padding: 10px;
-        width: calc(95% - 260px);
+        width: calc(95% - 240px);
     }
 }
 
@@ -180,7 +176,7 @@ body {
         
         background-color:$nav-bg;
          a{
-             color:$text-color;
+//             color:$text-color;
         }
     }
     
@@ -190,17 +186,19 @@ body {
     }
 }
 .sidebar #closebtn {
-    font-size:30px;
+    font-size:20px;
     line-height: 2em;
     padding-bottom:20px;
+    margin-top:10px;
     text-decoration: none;
-    color: white;
+    color: $text-color;
     font-weight:normal;
 }
 #openbtn {
     float:right;
     font-size:$icon-size;
     line-height: 1em;
+    text-decoration: none;
   }
 
 .gallery1 {
@@ -245,7 +243,7 @@ body {
 .gallery { 
     z-index: -1;
     font-size:0;    
-    column-gap: 12px; /* must match the bottom margin of imgbox */
+    column-gap: 60px; /* must match the bottom margin of imgbox */
     width:100%;
 
         @media (min-width: 1000px) {
@@ -260,17 +258,20 @@ body {
     .imgbox {
         img {
             width: 100%;
-            height:auto;
-            margin:0;
+            height: auto;
+            border-style:solid;
+            border-width:1px;
+            border-color: $border;   
         }
+        p {
+        font-size: 12px;
+//        font-family:sans-serif; 
+        }
+        break-inside: avoid;
+        align-content: center;
+        padding:5% 5% 0% 5%;
         box-sizing: border-box;
-        border-right-style:double;
-        border-right-width:3px;
-        border-bottom-style:double;
-        border-bottom-width:3px;
-        border-color: $border;
-        border-radius:$borderrad;
-        margin-bottom: 12px;
+        margin-bottom: 40px;
     }
 }
 .page {
@@ -334,14 +335,16 @@ body {
 
     .card {
         width:100%;
-        min-height: 152px;
+        min-height: 170px;
         height: auto;
-        border-style:solid;
-        border-width:$borderwid;
-        border-color: $border;
+        border-bottom-style:solid;
+        border-bottom-width:$borderwid;
+        border-bottom-color: $border;
         box-sizing: border-box;
-        border-radius: $borderrad;
-        margin-top: 10px;
+//        border-radius: $borderrad;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
         display:block;
         background-color: $box;
         
@@ -349,14 +352,16 @@ body {
             height:150px;
             width:auto;
             box-sizing: border-box;
-            border-bottom-style:solid;
-            border-bottom-width: $borderwid;
-            border-bottom-color: $border;
+            border-style:solid;
+            border-width: $borderwid;
+            border-color: $border;
+            margin: 0px 10px 0px 10px;
         }
         .desc {    
             box-sizing: border-box;
             display:block;
             margin:10px;
+            line-height: 1.25;
         }
     }
 }

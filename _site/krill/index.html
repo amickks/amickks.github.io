@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Krill-inspired robotics</title>
+    <title>Passively-actuated legs for krill robot</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
     <script src="/function.js"></script>
 </head>
@@ -15,8 +15,8 @@
 </script>
 
 <div class = "navbar mobile-only">
-    <div id="title"><a href="/" >Amick Sollenberger</a></div>
-    <a href="javascript:void(0)" id="openbtn" class="mobile-only" onclick="openNav()">☰</a>
+    <div class="title"><a href="/" >Amick Sollenberger</a></div>
+    <a href="javascript:void(0)" id="openbtn" class="mobile-only" onclick="openNav()">></a>
 </div>
     <div class="container">
     <script>
@@ -27,15 +27,15 @@ function closeNav() {
 </script>
 
 <div id="nav-js" class="sidebar">
-    <div id="title" class="large-only"><a href="/">Amick Sollenberger</a></div>
-    <a href="javascript:void(0)" id="closebtn" class="mobile-only" onclick="closeNav()">⏎</a>
+    <div class="title" ><div class="large-only"><a href="/">Amick Sollenberger</a></div></div>
+    <a href="javascript:void(0)" id="closebtn" class="mobile-only" onclick="closeNav()"><</a>
     <br>
     <nav>
         <div class="menu">
         <a href="/about/" >about</a> <br>
         <a href="/engineering/">engineering</a> <br>
         <a href="/work/">misc.</a> <br>
-        <a href="/resume/">resume</a> <br>
+        <a href="mailto:amick.sollenberger@gmail.com">email</a> <br>
         </div>
     </nav>
 </div>
@@ -53,21 +53,20 @@ function activateImg(imgs) {
 </script>
 
 
-	<h1>Krill-inspired robotics</h1>
-
-<h3><i>May 2022</i></h3>
-
-
-    <h3>Wilhelmus Lab, Brown University<h3>
+	<h1>Passively-actuated legs for krill robot</h1>
 
         
 
-    <h3>3D-printed PLA, laser-cut acrylic, arduino, CAD<h3>
+    <h3><i>3D-printed PLA, laser-cut acrylic, arduino, CAD</i><h3>
+
+        
+<h3>May 2022, Wilhelmus Lab, Brown University<h3>
+
 
 
 
 <div class="project">
-    <img id="activeImg" class="main" src="/assets/images/krill/krill.jpg">
+    <img id="activeImg" class="main" src="/assets/images/krill/krill_assembly.jpg">
     
         
     
@@ -92,25 +91,15 @@ function activateImg(imgs) {
         
     
         
-    
+            <img src="/assets/images/krill/krill_assembly.jpg" alt="image" onclick="activateImg(this);" >
         
     
         
-    
-        
-            <img src="/assets/images/krill/CAD.png" alt="image" onclick="activateImg(this);" >
+            <img src="/assets/images/krill/krill_inmotion.gif" alt="image" onclick="activateImg(this);" >
         
     
         
-            <img src="/assets/images/krill/krill.gif" alt="image" onclick="activateImg(this);" >
-        
-    
-        
-            <img src="/assets/images/krill/krill.jpg" alt="image" onclick="activateImg(this);" >
-        
-    
-        
-    
+            <img src="/assets/images/krill/leg_pic.png" alt="image" onclick="activateImg(this);" >
         
     
         
@@ -165,9 +154,10 @@ function activateImg(imgs) {
 
 
 
-<p>In the Spring 2022 semester, I worked together with a group of students in my Vibrations of Mechanical Systems course and the Wilhelmus Lab to develop a passivley actuated lower appendage for a krill-inspired robotics project.</p>
+<p>Passively-actuated leg for krill-inspired robot. Uses PLA “spring” to mimic krill leg trajectory. Completed as a part of a group project for ENGN1735: Vibrations of Mechanical Systems.
+<!--In the Spring 2022 semester, I worked together with a group of students in my Vibrations of Mechanical Systems course and the Wilhelmus Lab to develop a passivley actuated lower appendage for a krill-inspired robotics project.--></p>
 
-<p>This involved modeling the system in MATLAB to identify the ideal spring coefficient and working with Fusion 360 CAD software to modify and simplify the existing design. We experimented with the material properties of a variety of materials including rubber, acetate sheets and stainless steel wire as well as 3D printed PLA, testing each spring against the recorded motion of real krill appendages using the DLTDV tool in MATLAB.</p>
+<!--This involved modeling the system in MATLAB to identify the ideal spring coefficient and working with Fusion 360 CAD software to modify and simplify the existing design. We experimented with the material properties of a variety of materials including rubber, acetate sheets and stainless steel wire as well as 3D printed PLA, testing each spring against the recorded motion of real krill appendages using the DLTDV tool in MATLAB.-->
 
 
         </div>

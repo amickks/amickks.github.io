@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>DIY Mini Synthesizer Project</title>
+    <title>Mini synthesizer and sequencer</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
     <script src="/function.js"></script>
 </head>
@@ -15,8 +15,8 @@
 </script>
 
 <div class = "navbar mobile-only">
-    <div id="title"><a href="/" >Amick Sollenberger</a></div>
-    <a href="javascript:void(0)" id="openbtn" class="mobile-only" onclick="openNav()">☰</a>
+    <div class="title"><a href="/" >Amick Sollenberger</a></div>
+    <a href="javascript:void(0)" id="openbtn" class="mobile-only" onclick="openNav()">></a>
 </div>
     <div class="container">
     <script>
@@ -27,15 +27,15 @@ function closeNav() {
 </script>
 
 <div id="nav-js" class="sidebar">
-    <div id="title" class="large-only"><a href="/">Amick Sollenberger</a></div>
-    <a href="javascript:void(0)" id="closebtn" class="mobile-only" onclick="closeNav()">⏎</a>
+    <div class="title" ><div class="large-only"><a href="/">Amick Sollenberger</a></div></div>
+    <a href="javascript:void(0)" id="closebtn" class="mobile-only" onclick="closeNav()"><</a>
     <br>
     <nav>
         <div class="menu">
         <a href="/about/" >about</a> <br>
         <a href="/engineering/">engineering</a> <br>
         <a href="/work/">misc.</a> <br>
-        <a href="/resume/">resume</a> <br>
+        <a href="mailto:amick.sollenberger@gmail.com">email</a> <br>
         </div>
     </nav>
 </div>
@@ -53,21 +53,20 @@ function activateImg(imgs) {
 </script>
 
 
-	<h1>DIY Mini Synthesizer Project</h1>
-
-<h3><i>January 2024</i></h3>
-
-
-    <h3>Providence, RI<h3>
+	<h1>Mini synthesizer and sequencer</h1>
 
         
 
-    <h3>teensy 4.2, teensy audio shield, C<h3>
+    <h3><i>Teensy 4.2, Teensy Audio Shield, C</i><h3>
+
+        
+<h3>January 2024, Providence, RI<h3>
+
 
 
 
 <div class="project">
-    <img id="activeImg" class="main" src="/assets/images/synth/synth.jpg">
+    <img id="activeImg" class="main" src="/assets/images/synth/breadboard_synthesizer.jpg">
     
         
     
@@ -122,17 +121,7 @@ function activateImg(imgs) {
         
     
         
-    
-        
-    
-        
-    
-        
-    
-        
-            <img src="/assets/images/synth/synth.jpg" alt="image" onclick="activateImg(this);" >
-        
-    
+            <img src="/assets/images/synth/breadboard_synthesizer.jpg" alt="image" onclick="activateImg(this);" >
         
     
         
@@ -161,9 +150,11 @@ function activateImg(imgs) {
 
 
 
-<p>In the past few months, I have been working with a friend to build a synthesizer using teensy 4.2 and the teensy audio shield. We have collaborated on all aspects of the design and programming. Currently, the device is able to (1) sample and play back recordings, (2) assign samples and beats to steps on an 8-step sequencer, (3) adjust playback frequency, (4) play sine waves at variable frequency.</p>
+<p>Working with a friend to design and program a mini synthesizer/sequencer using Teensy 4.2 and Teensy Audio Shield. Work in progress.</p>
 
-<p>Moving forward, we are hoping to finalize the board layout and transition to battery power to allow the device to be operated untethered to the computer.</p>
+<!--In the past few months, I have been working with a friend to build a synthesizer using teensy 4.2 and the teensy audio shield. We have collaborated on all aspects of the design and programming. Currently, the device is able to (1) sample and play back recordings, (2) assign samples and beats to steps on an 8-step sequencer, (3) adjust playback frequency, (4) play sine waves at variable frequency. -->
+
+<!--Moving forward, we are hoping to finalize the board layout and transition to battery power to allow the device to be operated untethered to the computer.-->
 
 
         </div>

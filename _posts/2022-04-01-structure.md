@@ -1,12 +1,10 @@
 ---
 layout: post
-title: "structure"
+title: "Projector slide structure"
 categories: [sculpture, misc]
-medium: "glass projector slides, copper tape, solder"
-icon: /assets/images/icons/structure.png
-image: /assets/images/structure/structure.jpg
+medium: "Glass projector slides, copper tape, solder"
+icon: /assets/images/icons/slides.jpg
+image: /assets/images/structure/slides.jpg
 images: 'images/structure'
 permalink: /structure/
 ---
-
-A sculptural piece I worked on for an intro art class. The piece uses stained glass techniques to join glass projector slides into a three-dimensional form.

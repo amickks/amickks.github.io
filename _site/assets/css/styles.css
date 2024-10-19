@@ -1,58 +1,55 @@
-body { font-family: monospace; background-color: black; padding: 0px; margin: 0px; color: white; }
-body a { color: white; }
+body { font-family: sans-serif; font-size: 14px; background-color: white; padding: 0px; margin: 0px; color: black; }
 
-h1 { text-transform: uppercase; font-size: 19px; }
+h1 { font-size: 14px; }
 
-h2 { font-weight: normal; font-size: 18px; }
+h2 { font-size: 14px; text-transform: lowercase; font-weight: normal; }
 
-h3 { text-transform: uppercase; font-weight: normal; font-size: inherit; }
+h3 { font-size: 14px; font-weight: normal; }
 
-p { font-size: 15px; text-transform: none; text-align: justify; }
+p { font-size: 14px; line-height: 1.25; text-transform: none; }
 
 @media (min-width: 600px) { .mobile-only { display: none; } }
 @media (max-width: 600px) { .large-only { display: none; } }
-.navbar { top: 0; overflow: hidden; background-color: black; }
-.navbar a { text-transform: uppercase; color: white; text-decoration: none; padding: 20px; }
+.navbar { top: 0; overflow: hidden; background-color: white; }
+.navbar a { font-size: 16px; color: black; padding: 20px; }
 
-#title a { float: left; font-style: normal; font-weight: 600; text-transform: uppercase; font-size: 18px; text-decoration: none; }
-@media (max-width: 600px) { #title a { font-size: 18px; } }
-@media (min-width: 600px) { #title a { padding-bottom: 60px; } }
+.title a { float: left; font-style: normal; color: black; font-size: 16px; text-decoration-style: wavy; text-decoration-color: orangered; text-underline-position: below; text-decoration-thickness: 1px; }
+@media (min-width: 600px) { .title a { margin-bottom: 60px; } }
 
 .container { width: 100vw; }
 
-.sidebar { font-size: 15px; float: left; box-sizing: border-box; }
-.sidebar .menu a { line-height: 1.75; font-size: inherit; text-decoration: none; text-transform: uppercase; }
+.sidebar { padding: 10px; float: left; box-sizing: border-box; font-size: 16px; }
+.sidebar .menu a { line-height: 1.75; text-decoration: none; text-transform: lowercase; }
 .sidebar .menu a:hover { font-style: italic; text-decoration: none; }
 
-@media (min-width: 600px) { .sidebar { position: absolute; width: 200px; padding: 20px; margin-left: 10px; margin-top: 10px; height: 250px; border-style: solid; border-width: 1px; border-color: white; border-radius: 3px; background-color: black; }
-  .sidebar a { color: white; }
-  .content { position: absolute; left: 240px; margin-top: 10px; padding: 10px; width: calc(95% - 260px); } }
-@media (max-width: 600px) { .sidebar { position: fixed; width: 0%; height: 100%; z-index: 1; top: 0; right: -40px; margin-left: 60px; padding-left: 40px; transition: 0.2s; overflow: auto; background-color: black; }
-  .sidebar a { color: white; }
+@media (min-width: 600px) { .sidebar { position: absolute; width: 205px; padding: 20px; margin-left: 10px; margin-top: 10px; height: 250px; background-color: white; }
+  .content { position: absolute; left: 240px; margin-top: 10px; padding: 10px; width: calc(95% - 240px); } }
+@media (max-width: 600px) { .sidebar { position: fixed; width: 0%; height: 100%; z-index: 1; top: 0; right: -40px; margin-left: 60px; padding-left: 40px; transition: 0.2s; overflow: auto; background-color: white; }
   .content { width: calc(100% -40px); margin: 0 20px; } }
-.sidebar #closebtn { font-size: 30px; line-height: 2em; padding-bottom: 20px; text-decoration: none; color: white; font-weight: normal; }
+.sidebar #closebtn { font-size: 20px; line-height: 2em; padding-bottom: 20px; margin-top: 10px; text-decoration: none; color: black; font-weight: normal; }
 
-#openbtn { float: right; font-size: 18px; line-height: 1em; }
+#openbtn { float: right; font-size: 18px; line-height: 1em; text-decoration: none; }
 
 .gallery1 { display: grid; gap: 6%; z-index: -1; width: 100%; }
 @media (min-width: 1000px) { .gallery1 { grid-template-columns: 1fr 1fr 1fr 1fr; } }
 @media (min-width: 600px) and (max-width: 1000px) { .gallery1 { grid-template-columns: 1fr 1fr 1fr; } }
 @media (max-width: 600px) { .gallery1 { grid-template-columns: 1fr 1fr; } }
-.gallery1 .imgbox { display: flex; width: 100%; height: auto; box-sizing: border-box; border-style: solid; border-width: 1px; border-color: white; border-radius: 3px; background-position: center center; background-repeat: no-repeat; overflow: hidden; background-size: cover; }
+.gallery1 .imgbox { display: flex; width: 100%; height: auto; box-sizing: border-box; border-style: solid; border-width: 1px; border-color: black; border-radius: 0px; background-position: center center; background-repeat: no-repeat; overflow: hidden; background-size: cover; }
 .gallery1 .imgbox img { width: 100%; height: auto; margin: 0; }
 .gallery1 .imgbox:hover { opacity: 80%; }
 
-.gallery { z-index: -1; font-size: 0; column-gap: 12px; /* must match the bottom margin of imgbox */ width: 100%; }
+.gallery { z-index: -1; font-size: 0; column-gap: 60px; /* must match the bottom margin of imgbox */ width: 100%; }
 @media (min-width: 1000px) { .gallery { column-count: 3; } }
 @media (min-width: 600px) and (max-width: 1000px) { .gallery { column-count: 2; } }
 @media (max-width: 600px) { .gallery { column-count: 1; } }
-.gallery .imgbox { box-sizing: border-box; border-right-style: double; border-right-width: 3px; border-bottom-style: double; border-bottom-width: 3px; border-color: white; border-radius: 3px; margin-bottom: 12px; }
-.gallery .imgbox img { width: 100%; height: auto; margin: 0; }
+.gallery .imgbox { break-inside: avoid; align-content: center; padding: 5% 5% 0% 5%; box-sizing: border-box; margin-bottom: 40px; }
+.gallery .imgbox img { width: 100%; height: auto; border-style: solid; border-width: 1px; border-color: black; }
+.gallery .imgbox p { font-size: 12px; }
 
-.page img { width: 70%; border-style: solid; border-width: 1px; border-color: white; box-sizing: border-box; border-radius: 3px; margin-bottom: 10px; }
+.page img { width: 70%; border-style: solid; border-width: 1px; border-color: black; box-sizing: border-box; border-radius: 0px; margin-bottom: 10px; }
 
 .project { display: grid; gap: 20px; }
-.project img { object-fit: contain; max-width: 100%; border-style: solid; border-width: 1px; border-color: white; box-sizing: border-box; cursor: pointer; border-radius: 3px; }
+.project img { object-fit: contain; max-width: 100%; border-style: solid; border-width: 1px; border-color: black; box-sizing: border-box; cursor: pointer; border-radius: 0px; }
 .project .main { grid-row-end: span 5; border-style: none; aspect-ratio: 4 / 3; }
 @media (min-width: 600px) { .project { grid-template-columns: auto 10vw; width: 90%; }
   .project .main { height: 40vw; } }
@@ -60,10 +57,10 @@ p { font-size: 15px; text-transform: none; text-align: justify; }
   .project .main { grid-column-start: 1; grid-column-end: 5; height: 70vw; max-height: none; }
   .project img { max-height: 100px; } }
 
-.pagelist .card { width: 100%; min-height: 152px; height: auto; border-style: solid; border-width: 1px; border-color: white; box-sizing: border-box; border-radius: 3px; margin-top: 10px; display: block; background-color: black; }
-.pagelist .card img { height: 150px; width: auto; box-sizing: border-box; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: white; }
-.pagelist .card .desc { box-sizing: border-box; display: block; margin: 10px; }
+.pagelist .card { width: 100%; min-height: 170px; height: auto; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: black; box-sizing: border-box; margin-top: 20px; margin-bottom: 20px; padding-bottom: 20px; display: block; background-color: white; }
+.pagelist .card img { height: 150px; width: auto; box-sizing: border-box; border-style: solid; border-width: 1px; border-color: black; margin: 0px 10px 0px 10px; }
+.pagelist .card .desc { box-sizing: border-box; display: block; margin: 10px; line-height: 1.25; }
 
-.pagelist .card:nth-child(odd) img { float: left; clear: left; margin-right: 10px; border-right-style: solid; border-right-width: 1px; border-right-color: white; }
+.pagelist .card:nth-child(odd) img { float: left; clear: left; margin-right: 10px; border-right-style: solid; border-right-width: 1px; border-right-color: black; }
 
-.pagelist .card:nth-child(even) img { float: right; clear: right; border-left-style: solid; border-left-width: 1px; border-left-color: white; }
+.pagelist .card:nth-child(even) img { float: right; clear: right; border-left-style: solid; border-left-width: 1px; border-left-color: black; }

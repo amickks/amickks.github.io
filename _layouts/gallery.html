@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<h3>{{page.title}}</h3>
+<h3><i>{{page.title}}</i></h3>
 {{content}}
 
 
@@ -10,7 +10,11 @@ layout: default
         <div class ="card">
             <a href="{{ post.url }}"><img src = "{{post.image}}"></a>
             <div class = "desc">
-                <span>{{ post.date | date: "%Y" }}</span> <br><h3> <b><a href="{{ post.url }}">{{ post.title }}</a></b></h3> <br> <i>{{post.location}}</i> <br> {{post.medium}} <br><br> {{post.shortdesc}}
+<!--                <span>{{ post.date | date: "%Y" }}</span> <br>-->
+                <h3> <a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date: "%Y" }})
+                </h3> <br> {{post.location}}
+                <br><i>{{post.medium}}</i>  <br>
+                <br> {{post.shortdesc}}
             </div>
         </div>
 

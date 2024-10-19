@@ -3,14 +3,28 @@ layout: default
 ---
 <div class="gallery">
     {% for post in site.posts %}
-    <a href="{{ post.url | relative_url }}">
-    <div class="imgbox" >
-           <img src={{post.image}} alt="">  
-    </div> 
-    </a>
+        {% assign image_folder = post.images %}
+        {% capture image_list %}
+        {% for img in site.static_files %}
+            {% if img.path contains image_folder %}
+                {{ img.path }}
+            {% endif %}
+        {% endfor %}
+        {% endcapture %}
+        {% assign image_array = image_list | split: ' ' %}
+            {% for image in image_array %}
+                
+                
+                    <div class="imgbox">
+                        <a href="{{ post.url | relative_url }}">
+                        <img src="{{image}}" alt="{{ post.title }}">
+                        <p>{{ image | split: '/' | last }}</p>
+                        </a>
+                    </div>   
+                
+            {% endfor %}
+
     {% endfor %}
-
 </div>
-
 
 <!--<img src={{post.image}} alt="">  -->
