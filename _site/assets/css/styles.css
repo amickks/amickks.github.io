@@ -1,34 +1,34 @@
-body { font-family: sans-serif; font-size: 14px; background-color: white; padding: 0px; margin: 0px; color: black; }
+body { font-family: sans-serif; font-size: 14px; color: black; background-color: white; padding: 0px; margin: 0px; }
 
-h1 { font-size: 14px; }
+h1 { font-size: inherit; font-style: normal; font-weight: bold; }
 
-h2 { font-size: 14px; text-transform: lowercase; font-weight: normal; }
+h2 { font-size: inherit; font-style: italic; font-weight: normal; }
 
-h3 { font-size: 14px; font-weight: normal; }
+h3 { font-size: inherit; font-style: normal; font-weight: normal; }
 
-p { font-size: 14px; line-height: 1.25; text-transform: none; }
+p { font-size: inherit; line-height: 1.25; text-transform: none; }
 
 @media (min-width: 600px) { .mobile-only { display: none; } }
 @media (max-width: 600px) { .large-only { display: none; } }
 .navbar { top: 0; overflow: hidden; background-color: white; }
 .navbar a { font-size: 16px; color: black; padding: 20px; }
 
-.title a { float: left; font-style: normal; color: black; font-size: 16px; text-decoration-style: wavy; text-decoration-color: orangered; text-underline-position: below; text-decoration-thickness: 1px; }
+.title a { float: left; font-style: normal; color: black; text-decoration-style: wavy; text-decoration-color: orangered; text-underline-position: below; text-decoration-thickness: 1px; }
 @media (min-width: 600px) { .title a { margin-bottom: 60px; } }
 
 .container { width: 100vw; }
 
 .sidebar { padding: 10px; float: left; box-sizing: border-box; font-size: 16px; }
-.sidebar .menu a { line-height: 1.75; text-decoration: none; text-transform: lowercase; }
+.sidebar .menu a { line-height: 1.75; text-decoration: none; }
 .sidebar .menu a:hover { font-style: italic; text-decoration: none; }
 
 @media (min-width: 600px) { .sidebar { position: absolute; width: 205px; padding: 20px; margin-left: 10px; margin-top: 10px; height: 250px; background-color: white; }
   .content { position: absolute; left: 240px; margin-top: 10px; padding: 10px; width: calc(95% - 240px); } }
 @media (max-width: 600px) { .sidebar { position: fixed; width: 0%; height: 100%; z-index: 1; top: 0; right: -40px; margin-left: 60px; padding-left: 40px; transition: 0.2s; overflow: auto; background-color: white; }
   .content { width: calc(100% -40px); margin: 0 20px; } }
-.sidebar #closebtn { font-size: 20px; line-height: 2em; padding-bottom: 20px; margin-top: 10px; text-decoration: none; color: black; font-weight: normal; }
+#closebtn { font-size: 18px; line-height: 2em; text-decoration: none; color: black; font-weight: normal; }
 
-#openbtn { float: right; font-size: 18px; line-height: 1em; text-decoration: none; }
+#openbtn { float: right; font-size: 18px; line-height: 1em; text-decoration: none; color: black; font-weight: normal; }
 
 .gallery1 { display: grid; gap: 6%; z-index: -1; width: 100%; }
 @media (min-width: 1000px) { .gallery1 { grid-template-columns: 1fr 1fr 1fr 1fr; } }

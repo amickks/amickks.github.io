@@ -12,17 +12,15 @@ layout: default
         {% endfor %}
         {% endcapture %}
         {% assign image_array = image_list | split: ' ' %}
-            {% for image in image_array %}
-                
-                
-                    <div class="imgbox">
-                        <a href="{{ post.url | relative_url }}">
-                        <img src="{{image}}" alt="{{ post.title }}">
-                        <p>{{ image | split: '/' | last }}</p>
-                        </a>
-                    </div>   
-                
-            {% endfor %}
+            
+        {% for image in image_array %}                
+            <div class="imgbox">
+                <a href="{{ post.url | relative_url }}">
+                <img src="{{image}}" alt="{{post.title}}" loading="lazy">
+                <p>{{ image | split: '/' | last }}</p>
+                </a>
+            </div>       
+        {% endfor %}
 
     {% endfor %}
 </div>
