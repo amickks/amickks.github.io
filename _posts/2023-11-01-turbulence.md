@@ -7,7 +7,7 @@ location: "Breuer Lab, Brown University"
 icon: /assets/images/turbulence/grid_intunnel.jpg
 image: /assets/images/turbulence/grid_intunnel.jpg
 images: 'images/turbulence'
-shortdesc: "Turbulence-generating grid for wind turbine performance testing in a wind tunnel"
+shortdesc: "Turbulence-generating grid for wind turbine performance testing in a wind tunnel."
 permalink: /turbulence/
 ---
 Turbulence-generating grid for wind turbine performance testing in a wind tunnel as part of an independent study project with Professor Kenny Breuer. Designed in Fusion360, cut from baltic birch plywood using Shopbot CNC. Secured to wind tunnel using vacuum cups and 3D printed adjustment hooks.
